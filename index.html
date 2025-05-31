@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.8.4.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { font-family: "Liberation Mono", monospace; font-size: 10pt; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ar&quot; dir=&quot;rtl&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;<span lang="hi-IN">متجر الهواتف </span>V20 - <span lang="hi-IN">فؤاد للتجربة</span>&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css&quot;&gt;
+    &lt;style&gt;
+        @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&amp;display=swap');
+        :root {
+            --brand-primary-hue: 210; 
+            --brand-primary-saturation: 100%;
+            --brand-primary-lightness: 50%;
+            
+            --brand-primary: hsl(var(--brand-primary-hue), var(--brand-primary-saturation), var(--brand-primary-lightness));
+            --brand-primary-darker: hsl(var(--brand-primary-hue), var(--brand-primary-saturation), calc(var(--brand-primary-lightness) - 10%));
+            --brand-primary-lighter: hsl(var(--brand-primary-hue), var(--brand-primary-saturation), calc(var(--brand-primary-lightness) + 30%));
+            --brand-primary-alpha: hsla(var(--brand-primary-hue), var(--brand-primary-saturation), var(--brand-primary-lightness), 0.1);
+
+            --brand-secondary-hue: 210;
+            --brand-secondary-saturation: 7%;
+            --brand-secondary-lightness: 50%;
+            --brand-secondary: hsl(var(--brand-secondary-hue), var(--brand-secondary-saturation), var(--brand-secondary-lightness)); 
+            
+            --brand-accent-hue: 30; 
+            --brand-accent: hsl(var(--brand-accent-hue), 90%, 55%);
+            --brand-accent-darker: hsl(var(--brand-accent-hue), 90%, 45%);
+
+            --brand-success: #28a745; 
+            --brand-danger: #dc3545; 
+            --brand-warning: #ffc107; 
+            --brand-info: #17a2b8; 
+            
+            --text-primary-color: #1a202c; 
+            --text-secondary-color: #4a5568; 
+            --bg-main: #f8f9fc; 
+            --bg-card: #ffffff;
+            --border-color-soft: #e2e8f0;
+            --shadow-color: rgba(0, 0, 0, 0.07); 
+            --shadow-color-hover: rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            font-family: 'Almarai', sans-serif;
+            background-color: var(--bg-main); 
+            color: var(--text-primary-color); 
+            scroll-behavior: smooth;
+        }
+        .page { display: none; }
+        .visible-page-flex {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 148px); 
+        }
+        
+        .text-brand-primary { color: var(--brand-primary); }
+        .bg-brand-primary { background-color: var(--brand-primary); }
+        .border-brand-primary { border-color: var(--brand-primary); }
+        .hover\:bg-brand-primary-darker:hover { background-color: var(--brand-primary-darker); }
+        .text-text-primary { color: var(--text-primary-color); }
+        .text-text-secondary { color: var(--text-secondary-color); }
+        .border-border-color { border-color: var(--border-color-soft); }
+
+        .shadow-card { box-shadow: 0 4px 8px -2px var(--shadow-color), 0 2px 4px -2px var(--shadow-color); }
+        .shadow-card-lg { box-shadow: 0 10px 20px -5px var(--shadow-color), 0 4px 6px -4px var(--shadow-color); }
+        .shadow-interactive:hover { box-shadow: 0 10px 20px -5px var(--shadow-color-hover), 0 4px 6px -4px var(--shadow-color-hover); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem; 
+            border-radius: 0.5rem; 
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid transparent;
+            cursor: pointer;
+            letter-spacing: 0.3px; 
+        }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .btn-primary {
+            background-color: var(--brand-primary);
+            color: white;
+            border-color: var(--brand-primary);
+        }
+        .btn-primary:hover:not(:disabled) {
+            background-color: var(--brand-primary-darker);
+            border-color: var(--brand-primary-darker);
+            transform: translateY(-1px); 
+            box-shadow: 0 4px 8px hsla(var(--brand-primary-hue), var(--brand-primary-saturation), calc(var(--brand-primary-lightness) - 20%), 0.25);
+        }
+        .btn-secondary {
+            background-color: var(--brand-accent);
+            color: white;
+            border-color: var(--brand-accent);
+        }
+        .btn-secondary:hover:not(:disabled) {
+            background-color: var(--brand-accent-darker);
+            border-color: var(--brand-accent-darker);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px hsla(var(--brand-accent-hue), 90%, 35%, 0.25);
+        }
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--brand-primary);
+            border: 2px solid var(--brand-primary); 
+        }
+        .btn-ghost:hover:not(:disabled) {
+            background-color: var(--brand-primary-alpha);
+            color: var(--brand-primary-darker);
+        }
+         .btn-danger {
+            background-color: var(--brand-danger);
+            color: white;
+            border-color: var(--brand-danger);
+        }
+        .btn-danger:hover:not(:disabled) {
+            background-color: #c82333;
+            border-color: #bd2130;
+            transform: translateY(-1px);
+        }
+
+        .nav-link, .category-link {
+            padding: 0.6rem 1.1rem; 
+            border-radius: 0.375rem; 
+            transition: background-color 0.2s, color 0.2s, transform 0.2s;
+            color: var(--text-secondary-color); 
+            font-weight: 500; 
+        }
+        .nav-link:hover, .nav-link-mobile:hover, .category-link:hover {
+            background-color: var(--brand-primary-alpha);
+            color: var(--brand-primary);
+        }
+        .nav-link.active, .nav-link-mobile.active, .category-link.active {
+            background-color: var(--brand-primary);
+            color: white;
+            font-weight: 700;
+        }
+        .product-card {
+            background-color: var(--bg-card);
+            border-radius: 0.75rem; 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid var(--border-color-soft); 
+        }
+        .product-card:hover {
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 30px -5px var(--shadow-color-hover), 0 8px 10px -6px var(--shadow-color-hover);
+        }
+        .product-card-image-wrapper {
+            width: 100%;
+            padding-top: 80%; 
+            position: relative;
+            background-color: #f8f9fa; 
+        }
+        .product-card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            padding: 1rem; 
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-card:hover .product-card-image {
+            transform: scale(1.05); 
+        }
+        /* For horizontal scroll cards */
+        .horizontal-scroll-item .product-card {
+            width: 280px; /* Or your preferred width for horizontal items */
+            flex-shrink: 0;
+        }
+
+
+        .skeleton-loader {
+            background: linear-gradient(90deg, #e9edf1 25%, #f6f7f9 50%, #e9edf1 75%);
+            background-size: 200% 100%;
+            animation: pulseAnimation 1.8s infinite ease-in-out;
+        }
+        @keyframes pulseAnimation { 
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .thumbnail-gallery img {
+            cursor: pointer;
+            border: 2px solid transparent; 
+            border-radius: 0.375rem; 
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .thumbnail-gallery img:hover {
+            transform: scale(1.08);
+            border-color: var(--brand-primary-lighter);
+        }
+        .thumbnail-gallery img.active-thumbnail {
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 8px var(--brand-primary-alpha);
+        }
+        #toast-notification {
+            position: fixed;
+            bottom: 1.5rem; 
+            left: 50%;
+            transform: translateX(-50%) translateY(100%); 
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+            z-index: 1000;
+            border-radius: 0.5rem; 
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        header { background-color: var(--bg-card); box-shadow: 0 2px 4px rgba(0,0,0,0.05); } 
+        footer { background-color: var(--text-primary-color); color: #e2e8f0; }
+
+        #mobileNavMenu {
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+            background-color: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(8px);
+        }
+        #mobileNavMenu.hidden { transform: translateX(100%); opacity: 0; }
+        
+        .marquee-container {
+            background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent));
+            color: white;
+            padding: 0.6rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marqueeAnimation 25s linear infinite;
+            font-weight: 700; 
+            font-size: 0.9rem;
+        }
+        @keyframes marqueeAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 25px;
+            left: 25px; 
+            background-color: #25D366;
+            color: white;
+            width: 55px; 
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.4);
+            z-index: 999;
+            transition: transform 0.2s ease-in-out, background-color 0.2s;
+        }
+        .whatsapp-fab:hover {
+            background-color: #1DA851;
+            transform: scale(1.1) rotate(10deg); 
+        }
+        
+        #welcome-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background-color: var(--bg-card);
+            padding: 2.5rem; 
+            border-radius: 1rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            width: 90%;
+            max-width: 480px; 
+            text-align: center;
+        }
+        #welcome-box.visible { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+        .input-field {
+            border-radius: 0.375rem;
+            border: 1px solid var(--border-color-soft);
+            padding: 0.85rem 1rem; 
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background-color: #f8f9fa; 
+        }
+        .input-field:focus {
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 3px var(--brand-primary-alpha);
+            outline: none;
+            background-color: white;
+        }
+        .delivery-available-icon {
+            color: var(--brand-success);
+            font-size: 0.85em; 
+            font-weight: 500;
+        }
+        .product-badge {
+            position: absolute;
+            top: 12px; 
+            right: 12px;
+            color: white;
+            padding: 0.3rem 0.7rem; 
+            border-radius: 0.375rem;
+            font-size: 0.7rem; 
+            font-weight: 700;
+            z-index: 10;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-new { background-color: var(--brand-success); }
+        .badge-hot { background-color: var(--brand-danger); }
+        .badge-used { background-color: var(--brand-warning); color: var(--text-primary-color); } 
+
+        .hero-section {
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 20, 50, 0.5), rgba(0, 50, 100, 0.8)); 
+            z-index: 1;
+        }
+        .hero-content { position: relative; z-index: 2; }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .spec-item {
+            background-color: var(--brand-primary-alpha);
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            border-left: 4px solid var(--brand-primary);
+        }
+        .spec-label { font-weight: 700; color: var(--brand-primary-darker); }
+        .spec-value { color: var(--text-secondary-color); }
+
+        .star-rating .fa-star {
+            color: #e0e0e0; 
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .star-rating .fa-star.filled, .star-rating .fa-star:hover, .star-rating .fa-star:hover ~ .fa-star {
+            color: var(--brand-warning);
+        }
+        .comment-form textarea {
+            min-height: 100px;
+        }
+        .comment-item {
+            border-bottom: 1px solid var(--border-color-soft);
+        }
+        .comment-item:last-child { border-bottom: none; }
+
+        #category-nav-desktop, #category-nav-mobile {
+            border-bottom: 1px solid var(--border-color-soft);
+            background-color: var(--bg-card);
+        }
+        /* Advertisement Banners */
+        .advertisement-banner {
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .advertisement-banner:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card-lg);
+        }
+        .advertisement-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Horizontal Scroll for Featured Products */
+        .horizontal-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 1rem; /* For scrollbar visibility */
+            gap: 1rem; /* Spacing between cards */
+        }
+        .horizontal-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-track {
+            background: var(--border-color-soft);
+            border-radius: 10px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb {
+            background: var(--brand-secondary);
+            border-radius: 10px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: var(--brand-primary);
+        }
+        
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-gray-100&quot;&gt;
+
+    &lt;div class=&quot;marquee-container&quot;&gt;
+        &lt;div class=&quot;marquee-text&quot;&gt;✨ <span lang="hi-IN">فؤاد للتجربة ✨ أهلاً وسهلاً بكم في متجرنا</span>! ✨ <span lang="hi-IN">فؤاد للتجربة ✨ عروض خاصة بانتظاركم</span>! ✨ <span lang="hi-IN">فؤاد للتجربة ✨</span>&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;header class=&quot;sticky top-0 z-50 shadow-md&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;&gt;
+            &lt;div class=&quot;flex items-center justify-between h-20&quot;&gt;
+                &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); navigateTo('home')&quot; class=&quot;flex items-center space-x-2 space-x-reverse group&quot;&gt;
+                    &lt;i class=&quot;fas fa-rocket text-3xl text-brand-primary transform group-hover:rotate-12 transition-transform&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-2xl font-bold text-brand-dark&quot;&gt;<span lang="hi-IN">متجر فؤاد</span>&lt;/span&gt;
+                &lt;/a&gt;
+
+                &lt;nav class=&quot;hidden md:flex items-center space-x-1 space-x-reverse&quot;&gt;
+                    &lt;a href=&quot;#&quot; data-page=&quot;home&quot; onclick=&quot;event.preventDefault(); navigateTo('home')&quot; class=&quot;nav-link&quot;&gt;<span lang="hi-IN">الرئيسية</span>&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; data-page=&quot;products&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'all' })&quot; class=&quot;nav-link&quot;&gt;<span lang="hi-IN">المنتجات</span>&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; data-page=&quot;cart&quot; onclick=&quot;event.preventDefault(); navigateTo('cart')&quot; class=&quot;nav-link relative&quot;&gt;
+                        &lt;i class=&quot;fas fa-shopping-bag mr-1&quot;&gt;&lt;/i&gt; <span lang="hi-IN">السلة</span>
+                        &lt;span id=&quot;cart-item-count-v20&quot; class=&quot;absolute -top-2 -right-3 bg-brand-accent text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden&quot;&gt;0&lt;/span&gt;
+                    &lt;/a&gt;
+                     &lt;div id=&quot;loginNavButtonHeader&quot;&gt;
+                        &lt;a href=&quot;#&quot; data-page=&quot;auth&quot; onclick=&quot;event.preventDefault(); navigateTo('auth')&quot; class=&quot;btn btn-ghost !py-2 !px-4 text-sm&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut mr-2&quot;&gt;&lt;/i&gt;<span lang="hi-IN">تسجيل الدخول</span>&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div id=&quot;userProfileButtonHeader&quot; class=&quot;hidden group relative&quot;&gt;
+                        &lt;button onclick=&quot;event.preventDefault(); navigateTo('profile')&quot; class=&quot;flex items-center text-text-secondary hover:text-brand-primary transition-colors py-2 px-3 rounded-md hover:bg-brand-primary-alpha&quot;&gt;
+                            &lt;i class=&quot;fas fa-user-circle text-2xl mr-2&quot;&gt;&lt;/i&gt;
+                            &lt;span id=&quot;userIdentifierHeader&quot; class=&quot;text-sm font-medium hidden&quot;&gt;&lt;/span&gt;
+                            &lt;i class=&quot;fas fa-chevron-down text-xs ml-2 opacity-70 group-hover:opacity-100&quot;&gt;&lt;/i&gt;
+                        &lt;/button&gt;
+                         &lt;div class=&quot;absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20 hidden group-hover:block border border-border-color&quot;&gt;
+                            &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); navigateTo('profile')&quot; class=&quot;block px-4 py-2 text-sm text-gray-700 hover:bg-brand-primary-alpha hover:text-brand-primary rounded-t-md&quot;&gt;<span lang="hi-IN">ملفي الشخصي</span>&lt;/a&gt;
+                            &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); window.logoutUser()&quot; class=&quot;block px-4 py-2 text-sm text-red-600 hover:bg-red-50 hover:text-red-700 rounded-b-md&quot;&gt;<span lang="hi-IN">تسجيل الخروج</span>&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/nav&gt;
+
+                &lt;div class=&quot;md:hidden&quot;&gt;
+                    &lt;button id=&quot;mobileMenuButton&quot; class=&quot;text-gray-600 hover:text-brand-primary focus:outline-none p-2&quot;&gt;
+                        &lt;i class=&quot;fas fa-bars text-2xl&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;nav id=&quot;category-nav-desktop&quot; class=&quot;hidden md:block py-2&quot;&gt;
+            &lt;div class=&quot;container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-3 space-x-reverse&quot;&gt;
+                &lt;a href=&quot;#&quot; data-category=&quot;all&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'all' })&quot; class=&quot;category-link active&quot;&gt;<span lang="hi-IN">كل المنتجات</span>&lt;/a&gt;
+                &lt;a href=&quot;#&quot; data-category=&quot;new_phones&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'new_phones' })&quot; class=&quot;category-link&quot;&gt;<span lang="hi-IN">هواتف جديدة</span>&lt;/a&gt;
+                &lt;a href=&quot;#&quot; data-category=&quot;used_phones&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'used_phones' })&quot; class=&quot;category-link&quot;&gt;<span lang="hi-IN">هواتف مستخدمة</span>&lt;/a&gt;
+                &lt;a href=&quot;#&quot; data-category=&quot;electronic_cards&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'electronic_cards' })&quot; class=&quot;category-link&quot;&gt;<span lang="hi-IN">بطاقات إلكترونية</span>&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+
+
+        &lt;div id=&quot;mobileNavMenu&quot; class=&quot;md:hidden fixed inset-y-0 right-0 w-72 bg-white shadow-xl p-6 z-50 transform hidden&quot;&gt;
+            &lt;div class=&quot;flex justify-between items-center mb-6&quot;&gt;
+                 &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); navigateTo('home'); closeMobileMenu();&quot; class=&quot;flex items-center space-x-2 space-x-reverse&quot;&gt;
+                    &lt;i class=&quot;fas fa-rocket text-2xl text-brand-primary&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;text-xl font-bold text-brand-dark&quot;&gt;<span lang="hi-IN">القائمة</span>&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;button onclick=&quot;closeMobileMenu()&quot; class=&quot;text-gray-500 hover:text-brand-primary p-2&quot;&gt;
+                    &lt;i class=&quot;fas fa-times text-2xl&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;nav class=&quot;flex flex-col space-y-1&quot;&gt;
+                &lt;a href=&quot;#&quot; data-page=&quot;home&quot; onclick=&quot;event.preventDefault(); navigateTo('home'); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg&quot;&gt;<span lang="hi-IN">الرئيسية</span>&lt;/a&gt;
+                &lt;a href=&quot;#&quot; data-page=&quot;products&quot; data-category=&quot;all&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'all' }); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg&quot;&gt;<span lang="hi-IN">كل المنتجات</span>&lt;/a&gt;
+                &lt;a href=&quot;#&quot; data-page=&quot;products&quot; data-category=&quot;new_phones&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'new_phones' }); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg&quot;&gt;<span lang="hi-IN">هواتف جديدة</span>&lt;/a&gt;
+                &lt;a href=&quot;#&quot; data-page=&quot;products&quot; data-category=&quot;used_phones&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'used_phones' }); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg&quot;&gt;<span lang="hi-IN">هواتف مستخدمة</span>&lt;/a&gt;
+                &lt;a href=&quot;#&quot; data-page=&quot;products&quot; data-category=&quot;electronic_cards&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'electronic_cards' }); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg&quot;&gt;<span lang="hi-IN">بطاقات إلكترونية</span>&lt;/a&gt;
+                &lt;a href=&quot;#&quot; data-page=&quot;cart&quot; onclick=&quot;event.preventDefault(); navigateTo('cart'); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg&quot;&gt;<span lang="hi-IN">السلة</span>&lt;/a&gt;
+                &lt;hr class=&quot;my-2 border-border-color&quot;/&gt;
+                &lt;div id=&quot;loginNavButtonMobile&quot;&gt;
+                    &lt;a href=&quot;#&quot; data-page=&quot;auth&quot; onclick=&quot;event.preventDefault(); navigateTo('auth'); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg&quot;&gt;<span lang="hi-IN">تسجيل الدخول</span>&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div id=&quot;logoutNavButtonMobile&quot; class=&quot;hidden&quot;&gt;
+                     &lt;a href=&quot;#&quot; data-page=&quot;profile&quot; onclick=&quot;event.preventDefault(); navigateTo('profile'); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg&quot;&gt;<span lang="hi-IN">ملفي الشخصي</span>&lt;/a&gt;
+                    &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); window.logoutUser(); closeMobileMenu();&quot; class=&quot;nav-link-mobile py-2.5 px-3 block text-lg text-danger hover:bg-red-50&quot;&gt;<span lang="hi-IN">تسجيل الخروج</span>&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class=&quot;container mx-auto px-4 sm:px-6 lg:px-8 py-8&quot;&gt;
+        &lt;div id=&quot;home&quot; class=&quot;page&quot;&gt;
+            &lt;section class=&quot;hero-section text-center py-20 md:py-32 rounded-xl shadow-xl text-white relative overflow-hidden&quot; style=&quot;background-image: url('https://placehold.co/1200x600/334466/FFFFFF?text=<span lang="hi-IN">خلفية</span>+<span lang="hi-IN">متجر</span>+<span lang="hi-IN">هواتف</span>&amp;font=Almarai');&quot;&gt;
+                &lt;div class=&quot;hero-content&quot;&gt;
+                    &lt;h1 class=&quot;text-4xl md:text-6xl font-extrabold mb-6&quot;&gt;<span lang="hi-IN">أحدث الهواتف الذكية بين يديك</span>&lt;/h1&gt;
+                    &lt;p class=&quot;text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90&quot;&gt;<span lang="hi-IN">اكتشف مجموعتنا المختارة من أفضل الأجهزة بأفضل الأسعار مع ضمانات مميزة وخدمة توصيل سريعة لجميع أنحاء العراق</span>!&lt;/p&gt;
+                    &lt;div class=&quot;space-x-4 space-x-reverse&quot;&gt;
+                        &lt;button onclick=&quot;navigateTo('products', { category: 'all' })&quot; class=&quot;btn btn-primary text-lg px-10 py-3.5 shadow-lg hover:shadow-xl transform hover:scale-105&quot;&gt;
+                            &lt;i class=&quot;fas fa-store mr-2&quot;&gt;&lt;/i&gt; <span lang="hi-IN">تصفح المنتجات</span>
+                        &lt;/button&gt;
+                         &lt;button onclick=&quot;document.getElementById('featured-products-container').scrollIntoView({behavior: 'smooth'});&quot; class=&quot;btn btn-secondary text-lg px-10 py-3.5 shadow-lg hover:shadow-xl transform hover:scale-105&quot;&gt;
+                            &lt;i class=&quot;fas fa-star mr-2&quot;&gt;&lt;/i&gt; <span lang="hi-IN">شاهد العروض</span>
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+
+            &lt;section id=&quot;advertisements-section&quot; class=&quot;py-12&quot;&gt;
+                &lt;h2 class=&quot;text-3xl font-bold text-center mb-10 text-brand-dark&quot;&gt;<span lang="hi-IN">أحدث الإعلانات والعروض</span>&lt;/h2&gt;
+                &lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;advertisement-banner block group&quot;&gt;
+                        &lt;img src=&quot;https://placehold.co/600x300/007BFF/FFFFFF?text=<span lang="hi-IN">إعلان</span>+<span lang="hi-IN">مميز</span>+1&amp;font=Almarai&quot; alt=&quot;<span lang="hi-IN">إعلان </span>1&quot;&gt;
+                        &lt;div class=&quot;p-4 bg-white&quot;&gt;
+                            &lt;h3 class=&quot;text-lg font-semibold text-brand-primary group-hover:underline&quot;&gt;<span lang="hi-IN">تخفيضات هائلة على هواتف سامسونج</span>!&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm text-text-secondary&quot;&gt;<span lang="hi-IN">لا تفوت الفرصة، خصم يصل إلى </span>20%.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;advertisement-banner block group&quot;&gt;
+                        &lt;img src=&quot;https://placehold.co/600x300/FFC107/333333?text=<span lang="hi-IN">إعلان</span>+<span lang="hi-IN">جديد</span>+2&amp;font=Almarai&quot; alt=&quot;<span lang="hi-IN">إعلان </span>2&quot;&gt;
+                         &lt;div class=&quot;p-4 bg-white&quot;&gt;
+                            &lt;h3 class=&quot;text-lg font-semibold text-brand-accent group-hover:underline&quot;&gt;<span lang="hi-IN">وصل حديثاً</span>: <span lang="hi-IN">آيفون الجديد كلياً</span>!&lt;/h3&gt;
+                            &lt;p class=&quot;text-sm text-text-secondary&quot;&gt;<span lang="hi-IN">اطلبه الآن واحصل على هدية مجانية</span>.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+
+
+            &lt;section id=&quot;featured-products-container&quot; class=&quot;py-16&quot;&gt;
+                &lt;h2 class=&quot;text-3xl font-bold text-center mb-10 text-brand-dark&quot;&gt;<span lang="hi-IN">عروض مميزة </span>&lt;i class=&quot;fas fa-fire text-brand-accent&quot;&gt;&lt;/i&gt;&lt;/h2&gt;
+                &lt;div id=&quot;featured-products-v20&quot; class=&quot;horizontal-scroll-container -mx-4 px-4&quot;&gt;
+                    &lt;/div&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;products&quot; class=&quot;page&quot;&gt;
+            &lt;h1 id=&quot;products-page-title&quot; class=&quot;text-3xl font-bold mb-10 text-center text-brand-dark&quot;&gt;<span lang="hi-IN">جميع المنتجات</span>&lt;/h1&gt;
+            &lt;div id=&quot;products-grid-v20&quot; class=&quot;grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8&quot;&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;product-detail&quot; class=&quot;page&quot;&gt;
+            &lt;div id=&quot;product-detail-content-v20&quot; class=&quot;max-w-5xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-card-lg&quot;&gt;
+                &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;cart&quot; class=&quot;page&quot;&gt;
+            &lt;h1 class=&quot;text-3xl font-bold mb-8 text-center text-brand-dark&quot;&gt;<span lang="hi-IN">سلة التسوق الخاصة بك </span>&lt;i class=&quot;fas fa-shopping-cart text-brand-primary&quot;&gt;&lt;/i&gt;&lt;/h1&gt;
+            &lt;div class=&quot;max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-card-lg&quot;&gt;
+                &lt;div id=&quot;cart-items-container-v20&quot;&gt;
+                    &lt;/div&gt;
+                &lt;p id=&quot;empty-cart-message-v20&quot; class=&quot;text-center text-text-light py-8 text-lg hidden&quot;&gt;<span lang="hi-IN">سلتك فارغة حالياً</span>. &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); navigateTo('products', { category: 'all' })&quot; class=&quot;text-brand-primary hover:underline font-semibold&quot;&gt;<span lang="hi-IN">ابدأ التسوق الآن</span>!&lt;/a&gt;&lt;/p&gt;
+                
+                &lt;div id=&quot;cart-summary-v20&quot; class=&quot;mt-8 pt-6 border-t border-border-color hidden&quot;&gt;
+                    &lt;div class=&quot;flex justify-between text-lg font-medium text-text-primary mb-2&quot;&gt;
+                        &lt;p&gt;<span lang="hi-IN">المجموع الفرعي</span>&lt;/p&gt;
+                        &lt;p id=&quot;cart-subtotal-v20&quot;&gt;0 <span lang="hi-IN">د</span>.<span lang="hi-IN">ع</span>&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;flex justify-between text-xl font-bold text-brand-dark mt-4 mb-6&quot;&gt;
+                        &lt;p&gt;<span lang="hi-IN">المجموع الإجمالي</span>&lt;/p&gt;
+                        &lt;p id=&quot;cart-total-v20&quot;&gt;0 <span lang="hi-IN">د</span>.<span lang="hi-IN">ع</span>&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;button onclick=&quot;showToast('<span lang="hi-IN">سيتم توجيهك لصفحة الدفع </span>(<span lang="hi-IN">غير مبرمجة بعد</span>)', 4000)&quot; class=&quot;btn btn-primary w-full text-lg py-3.5&quot;&gt;
+                        <span lang="hi-IN">المتابعة إلى الدفع </span>&lt;i class=&quot;fas fa-credit-card mr-2&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;auth&quot; class=&quot;page&quot;&gt;
+            &lt;div class=&quot;max-w-md mx-auto mt-8 sm:mt-12 bg-white p-6 sm:p-10 rounded-xl shadow-card-lg&quot;&gt;
+                &lt;div class=&quot;mb-6 border-b border-border-color&quot;&gt;
+                    &lt;nav class=&quot;flex -mb-px space-x-4 space-x-reverse&quot; aria-label=&quot;Tabs&quot;&gt;
+                        &lt;button id=&quot;loginTab&quot; onclick=&quot;window.showAuthForm('login')&quot; class=&quot;auth-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg&quot;&gt;
+                            <span lang="hi-IN">تسجيل الدخول</span>
+                        &lt;/button&gt;
+                        &lt;button id=&quot;registerTab&quot; onclick=&quot;window.showAuthForm('register')&quot; class=&quot;auth-tab whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg&quot;&gt;
+                            <span lang="hi-IN">إنشاء حساب</span>
+                        &lt;/button&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+
+                &lt;div id=&quot;authError&quot; class=&quot;mb-4 p-3 bg-red-100 text-red-700 border border-red-300 rounded-md text-sm hidden&quot;&gt;&lt;/div&gt;
+
+                &lt;div id=&quot;loginSection&quot;&gt;
+                    &lt;form id=&quot;loginForm&quot; class=&quot;space-y-6&quot;&gt;
+                        &lt;div&gt;
+                            &lt;label for=&quot;email-login&quot; class=&quot;block text-sm font-medium text-text-primary mb-1&quot;&gt;<span lang="hi-IN">البريد الإلكتروني</span>&lt;/label&gt;
+                            &lt;input type=&quot;email&quot; id=&quot;email-login&quot; name=&quot;email-login&quot; required class=&quot;w-full input-field&quot; placeholder=&quot;you@example.com&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label for=&quot;password-login&quot; class=&quot;block text-sm font-medium text-text-primary mb-1&quot;&gt;<span lang="hi-IN">كلمة المرور</span>&lt;/label&gt;
+                            &lt;input type=&quot;password&quot; id=&quot;password-login&quot; name=&quot;password-login&quot; required class=&quot;w-full input-field&quot; placeholder=&quot;********&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+                            &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); window.showAuthForm('forgotPassword')&quot; class=&quot;text-sm text-brand-primary hover:underline&quot;&gt;<span lang="hi-IN">هل نسيت كلمة المرور؟</span>&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary w-full text-base py-3&quot;&gt;<span lang="hi-IN">تسجيل الدخول</span>&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+
+                &lt;div id=&quot;registerSection&quot; class=&quot;hidden&quot;&gt;
+                    &lt;form id=&quot;registerForm&quot; class=&quot;space-y-6&quot;&gt;
+                         &lt;div&gt;
+                            &lt;label for=&quot;email-register&quot; class=&quot;block text-sm font-medium text-text-primary mb-1&quot;&gt;<span lang="hi-IN">البريد الإلكتروني</span>&lt;/label&gt;
+                            &lt;input type=&quot;email&quot; id=&quot;email-register&quot; name=&quot;email-register&quot; required class=&quot;w-full input-field&quot; placeholder=&quot;you@example.com&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label for=&quot;password-register&quot; class=&quot;block text-sm font-medium text-text-primary mb-1&quot;&gt;<span lang="hi-IN">كلمة المرور</span>&lt;/label&gt;
+                            &lt;input type=&quot;password&quot; id=&quot;password-register&quot; name=&quot;password-register&quot; required minlength=&quot;6&quot; class=&quot;w-full input-field&quot; placeholder=&quot;********&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;label for=&quot;password-confirm-register&quot; class=&quot;block text-sm font-medium text-text-primary mb-1&quot;&gt;<span lang="hi-IN">تأكيد كلمة المرور</span>&lt;/label&gt;
+                            &lt;input type=&quot;password&quot; id=&quot;password-confirm-register&quot; name=&quot;password-confirm-register&quot; required class=&quot;w-full input-field&quot; placeholder=&quot;********&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary w-full text-base py-3&quot;&gt;<span lang="hi-IN">إنشاء حساب جديد</span>&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+                
+                &lt;div id=&quot;forgotPasswordSection&quot; class=&quot;hidden&quot;&gt;
+                    &lt;h2 class=&quot;text-xl font-semibold text-center text-brand-dark mb-6&quot;&gt;<span lang="hi-IN">استعادة كلمة المرور</span>&lt;/h2&gt;
+                    &lt;form id=&quot;forgotPasswordForm&quot; class=&quot;space-y-6&quot;&gt;
+                        &lt;div&gt;
+                            &lt;label for=&quot;email-forgot&quot; class=&quot;block text-sm font-medium text-text-primary mb-1&quot;&gt;<span lang="hi-IN">البريد الإلكتروني المسجل</span>&lt;/label&gt;
+                            &lt;input type=&quot;email&quot; id=&quot;email-forgot&quot; name=&quot;email-forgot&quot; required class=&quot;w-full input-field&quot; placeholder=&quot;you@example.com&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary w-full text-base py-3&quot;&gt;<span lang="hi-IN">إرسال رابط الاستعادة</span>&lt;/button&gt;
+                        &lt;button type=&quot;button&quot; onclick=&quot;window.showAuthForm('login')&quot; class=&quot;btn btn-ghost w-full mt-3 text-base py-3&quot;&gt;<span lang="hi-IN">العودة لتسجيل الدخول</span>&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div id=&quot;profile&quot; class=&quot;page&quot;&gt;
+            &lt;h1 class=&quot;text-3xl font-bold mb-8 text-center text-brand-dark&quot;&gt;<span lang="hi-IN">ملفي الشخصي</span>&lt;/h1&gt;
+            &lt;div class=&quot;max-w-lg mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-card-lg&quot;&gt;
+                &lt;div id=&quot;user-profile-info&quot;&gt;
+                    &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;admin-panel&quot; class=&quot;page&quot;&gt;
+            &lt;div class=&quot;max-w-4xl mx-auto text-center py-16&quot;&gt;
+                &lt;i class=&quot;fas fa-cogs text-6xl text-brand-primary mb-6&quot;&gt;&lt;/i&gt;
+                &lt;h1 class=&quot;text-3xl font-bold mb-4 text-brand-dark&quot;&gt;<span lang="hi-IN">لوحة التحكم الإدارية</span>&lt;/h1&gt;
+                &lt;p class=&quot;text-text-secondary text-lg mb-8&quot;&gt;<span lang="hi-IN">هذه المنطقة مخصصة لإدارة المتجر </span>(<span lang="hi-IN">المنتجات، الطلبات، المستخدمين، إلخ</span>).&lt;/p&gt;
+                &lt;p class=&quot;text-text-secondary&quot;&gt;🚧 <span lang="hi-IN">هذه الميزة قيد التطوير حالياً</span>. 🚧&lt;/p&gt;
+                &lt;button onclick=&quot;navigateTo('home')&quot; class=&quot;btn btn-primary mt-8&quot;&gt;<span lang="hi-IN">العودة للرئيسية</span>&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+
+    &lt;/main&gt;
+
+    &lt;footer class=&quot;text-white py-10 mt-12&quot;&gt;
+        &lt;div class=&quot;container mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;&gt;
+            &lt;div class=&quot;mb-4&quot;&gt;
+                &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); navigateTo('home')&quot; class=&quot;text-xl font-semibold hover:text-brand-primary transition-colors&quot;&gt;<span lang="hi-IN">متجر فؤاد للهواتف</span>&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;mb-3&quot;&gt;
+                 &lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); navigateTo('admin-panel')&quot; class=&quot;text-sm text-gray-400 hover:text-white transition-colors&quot;&gt;&lt;i class=&quot;fas fa-user-shield mr-1&quot;&gt;&lt;/i&gt; <span lang="hi-IN">لوحة التحكم </span>(<span lang="hi-IN">تجريبي</span>)&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;p&gt;&amp;copy; &lt;span id=&quot;currentYear&quot;&gt;&lt;/span&gt;. <span lang="hi-IN">جميع الحقوق محفوظة</span>.&lt;/p&gt;
+            &lt;p class=&quot;text-xs mt-2 opacity-75&quot;&gt;<span lang="hi-IN">معرف المستخدم الحالي</span>: &lt;span id=&quot;footerUserId&quot;&gt;N/A&lt;/span&gt;&lt;/p&gt;
+            &lt;p class=&quot;text-xs mt-1 opacity-75&quot;&gt;<span lang="hi-IN">معرف التطبيق</span>: &lt;span id=&quot;footerAppId&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+             &lt;div class=&quot;mt-4 space-x-4 space-x-reverse&quot;&gt;
+                &lt;a href=&quot;https://wa.me/9647746755315&quot; target=&quot;_blank&quot; class=&quot;text-gray-400 hover:text-white transition-colors text-lg&quot;&gt;&lt;i class=&quot;fab fa-whatsapp&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;text-gray-400 hover:text-white transition-colors text-lg&quot;&gt;&lt;i class=&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;text-gray-400 hover:text-white transition-colors text-lg&quot;&gt;&lt;i class=&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;text-gray-400 hover:text-white transition-colors text-lg&quot;&gt;&lt;i class=&quot;fab fa-telegram-plane&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;div id=&quot;toast-notification&quot; class=&quot;fixed bottom-6 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-300 ease-in-out z-[1000]&quot;&gt;
+        &lt;p id=&quot;toast-message&quot;&gt;<span lang="hi-IN">رسالة إشعار</span>!&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;a href=&quot;https://wa.me/9647746755315&quot; target=&quot;_blank&quot; class=&quot;whatsapp-fab&quot; aria-label=&quot;<span lang="hi-IN">تواصل معنا عبر واتساب</span>&quot;&gt;
+        &lt;i class=&quot;fab fa-whatsapp&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+
+    &lt;div id=&quot;welcome-box&quot; class=&quot;hidden&quot;&gt;
+        &lt;button onclick=&quot;document.getElementById('welcome-box').classList.remove('visible'); setTimeout(() =&gt; document.getElementById('welcome-box').classList.add('hidden'), 300);&quot; class=&quot;absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl p-2&quot;&gt;&amp;times;&lt;/button&gt;
+        &lt;i class=&quot;fas fa-concierge-bell text-5xl text-brand-primary mb-4&quot;&gt;&lt;/i&gt;
+        &lt;h2 class=&quot;text-2xl font-bold text-brand-dark mb-3&quot;&gt;<span lang="hi-IN">مرحباً بك في متجر فؤاد</span>!&lt;/h2&gt;
+        &lt;p class=&quot;text-text-secondary mb-6&quot;&gt;<span lang="hi-IN">يسرنا تواجدك معنا</span>. <span lang="hi-IN">اكتشف أحدث العروض والمنتجات الحصرية</span>. <span lang="hi-IN">نتمنى لك تجربة تسوق ممتعة</span>!&lt;/p&gt;
+        &lt;button onclick=&quot;document.getElementById('welcome-box').classList.remove('visible'); setTimeout(() =&gt; document.getElementById('welcome-box').classList.add('hidden'), 300);&quot; class=&quot;btn btn-primary px-8&quot;&gt;<span lang="hi-IN">ابدأ التصفح</span>&lt;/button&gt;
+    &lt;/div&gt;
+
+
+    &lt;script type=&quot;module&quot;&gt;
+        // --- Configuration Override ---
+        window.__firebase_config = JSON.stringify({
+            apiKey: &quot;AIzaSyCzyydqaVaerL_ej4mT6ajec7_vhWoAeG8&quot;, 
+            authDomain: &quot;mobiley-c20ed.firebaseapp.com&quot;,
+            projectId: &quot;mobiley-c20ed&quot;,
+            storageBucket: &quot;mobiley-c20ed.appspot.com&quot;, 
+            messagingSenderId: &quot;381176569178&quot;,
+            appId: &quot;1:381176569178:web:e1b042a7b7874740046763&quot;,
+            measurementId: &quot;G-HG4212ECSW&quot;
+        });
+        window.__app_id = &quot;mobiley_c20ed_phone_store_v20&quot;; 
+        // --- End Configuration Override ---
+
+        const logError = (message, errorObject = null) =&gt; {
+            console.error(`[V20_ERROR] ${message}`, errorObject ? errorObject : '');
+        };
+        
+        console.log('[MODULE SCRIPT - V20] Module script started.');
+
+        import { initializeApp } from &quot;https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js&quot;;
+        import { 
+            getAuth, signInAnonymously, onAuthStateChanged, signOut, signInWithCustomToken,
+            createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail
+        } from &quot;https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js&quot;;
+        import { 
+            getFirestore, collection, getDocs, query as firestoreQuery, doc, getDoc, 
+            addDoc, updateDoc, deleteDoc, where, Timestamp, onSnapshot, writeBatch
+        } from &quot;https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js&quot;;
+
+        // --- Dummy Product Data ---
+        const dummyProducts = [
+            // New Phones
+            { id: &quot;dummy_np1&quot;, category: &quot;new_phones&quot;, name_ar: &quot;<span lang="hi-IN">هاتف فانتوم </span>X2 <span lang="hi-IN">برو</span>&quot;, price: 1250000, brand_ar: &quot;<span lang="hi-IN">تيكنو</span>&quot;, condition_ar: &quot;<span lang="hi-IN">جديد</span>&quot;, storage_gb: 256, color_ar: &quot;<span lang="hi-IN">رمادي فضائي</span>&quot;, description_ar: &quot;<span lang="hi-IN">أحدث إصدار من تيكنو بكاميرا خرافية وأداء جبار</span>. <span lang="hi-IN">يتميز بشاشة </span>AMOLED <span lang="hi-IN">منحنية ومعالج قوي</span>.&quot;, mainImageUrl: &quot;https://placehold.co/600x400/4A5568/FFFFFF?text=Phantom+X2+Pro&amp;font=Almarai&quot;, otherImageUrls: [&quot;https://placehold.co/600x400/667EEA/FFFFFF?text=Phantom+Side&amp;font=Almarai&quot;], isFeatured: true, isNew: true, specs: { dimensions: &quot;164.6 x 72.7 x 8.9 mm&quot;, weight: &quot;201g&quot;, screen_type: &quot;AMOLED, 120Hz&quot;, resolution: &quot;1080 x 2400 pixels&quot;, os: &quot;Android 12, HIOS 12&quot;, chipset: &quot;MediaTek Dimensity 9000&quot;, ram: &quot;12GB&quot;, battery_capacity: &quot;5160 mAh&quot; } },
+            { id: &quot;dummy_np2&quot;, category: &quot;new_phones&quot;, name_ar: &quot;<span lang="hi-IN">جلاكسي </span>S24 <span lang="hi-IN">ألترا</span>&quot;, price: 1950000, brand_ar: &quot;<span lang="hi-IN">سامسونج</span>&quot;, condition_ar: &quot;<span lang="hi-IN">جديد</span>&quot;, storage_gb: 512, color_ar: &quot;<span lang="hi-IN">أسود تيتانيوم</span>&quot;, description_ar: &quot;<span lang="hi-IN">تجربة متكاملة من سامسونج مع قلم </span>S Pen <span lang="hi-IN">مدمج، كاميرا </span>200 <span lang="hi-IN">ميجابكسل، وذكاء اصطناعي متقدم</span>.&quot;, mainImageUrl: &quot;https://placehold.co/600x400/2D3748/FFFFFF?text=Galaxy+S24+Ultra&amp;font=Almarai&quot;, isFeatured: true, isHot: true, specs: { dimensions: &quot;162.3 x 79 x 8.6 mm&quot;, weight: &quot;232g&quot;, screen_type: &quot;Dynamic AMOLED 2X, 120Hz, HDR10+&quot;, resolution: &quot;1440 x 3088 pixels&quot;, os: &quot;Android 14, One UI 6.1&quot;, chipset: &quot;Snapdragon 8 Gen 3 for Galaxy&quot;, ram: &quot;12GB&quot;, battery_capacity: &quot;5000 mAh&quot; } },
+            { id: &quot;dummy_np3&quot;, category: &quot;new_phones&quot;, name_ar: &quot;<span lang="hi-IN">آيفون </span>15 <span lang="hi-IN">برو ماكس</span>&quot;, price: 2300000, brand_ar: &quot;<span lang="hi-IN">آبل</span>&quot;, condition_ar: &quot;<span lang="hi-IN">جديد</span>&quot;, storage_gb: 256, color_ar: &quot;<span lang="hi-IN">تيتانيوم طبيعي</span>&quot;, description_ar: &quot;<span lang="hi-IN">أقوى آيفون حتى الآن مع شريحة </span>A17 Bionic<span lang="hi-IN">، تصميم من التيتانيوم، ومنفذ </span>USB-C.&quot;, mainImageUrl: &quot;https://placehold.co/600x400/5A0FC8/FFFFFF?text=iPhone+15+Pro+Max&amp;font=Almarai&quot;, isFeatured: true, specs: { dimensions: &quot;159.9 x 76.7 x 8.3 mm&quot;, weight: &quot;221g&quot;, screen_type: &quot;Super Retina XDR OLED, 120Hz ProMotion&quot;, resolution: &quot;1290 x 2796 pixels&quot;, os: &quot;iOS 17&quot;, chipset: &quot;Apple A17 Bionic&quot;, ram: &quot;8GB&quot;, battery_capacity: &quot;4422 mAh&quot; } },
+            // Used Phones
+            { id: &quot;dummy_up1&quot;, category: &quot;used_phones&quot;, name_ar: &quot;<span lang="hi-IN">آيفون </span>12 <span lang="hi-IN">برو </span>(<span lang="hi-IN">مستخدم</span>)&quot;, price: 1100000, brand_ar: &quot;<span lang="hi-IN">آبل</span>&quot;, condition_ar: &quot;<span lang="hi-IN">مستخدم </span>- <span lang="hi-IN">حالة ممتازة</span>&quot;, storage_gb: 128, color_ar: &quot;<span lang="hi-IN">أزرق محيطي</span>&quot;, description_ar: &quot;<span lang="hi-IN">آيفون </span>12 <span lang="hi-IN">برو بحالة ممتازة، استخدام خفيف، مع بطارية </span>90%. <span lang="hi-IN">لا توجد خدوش على الشاشة أو الهيكل</span>.&quot;, mainImageUrl: &quot;https://placehold.co/600x400/3182CE/FFFFFF?text=iPhone+12+Pro+Used&amp;font=Almarai&quot;, isFeatured: false, usage_details: &quot;<span lang="hi-IN">استخدام سنة واحدة، نسبة البطارية </span>90%&quot;, specs: { os: &quot;iOS 16 (<span lang="hi-IN">قابل للتحديث</span>)&quot;, chipset: &quot;Apple A14 Bionic&quot;, ram: &quot;6GB&quot; } },
+            { id: &quot;dummy_up2&quot;, category: &quot;used_phones&quot;, name_ar: &quot;<span lang="hi-IN">سامسونج جلاكسي </span>S21 (<span lang="hi-IN">مستخدم</span>)&quot;, price: 750000, brand_ar: &quot;<span lang="hi-IN">سامسونج</span>&quot;, condition_ar: &quot;<span lang="hi-IN">مستخدم </span>- <span lang="hi-IN">جيد جداً</span>&quot;, storage_gb: 256, color_ar: &quot;<span lang="hi-IN">بنفسجي فانتوم</span>&quot;, description_ar: &quot;<span lang="hi-IN">جهاز </span>S21 <span lang="hi-IN">مستخدم مع بعض العلامات الطفيفة على الإطار</span>. <span lang="hi-IN">الشاشة بحالة ممتازة</span>.&quot;, mainImageUrl: &quot;https://placehold.co/600x400/805AD5/FFFFFF?text=Galaxy+S21+Used&amp;font=Almarai&quot;, usage_details: &quot;<span lang="hi-IN">استخدام سنتين، نسبة البطارية </span>85%&quot;, specs: { os: &quot;Android 13 (<span lang="hi-IN">قابل للتحديث</span>)&quot;, chipset: &quot;Exynos 2100 / Snapdragon 888&quot;, ram: &quot;8GB&quot; } },
+            // Electronic Cards
+            { id: &quot;dummy_ec1&quot;, category: &quot;electronic_cards&quot;, name_ar: &quot;<span lang="hi-IN">بطاقة شحن آيتونز </span>50 <span lang="hi-IN">دولار </span>(<span lang="hi-IN">أمريكي</span>)&quot;, price: 70000, brand_ar: &quot;<span lang="hi-IN">آبل</span>&quot;, card_type: &quot;<span lang="hi-IN">شحن رصيد</span>&quot;, value: &quot;50 USD&quot;, region: &quot;<span lang="hi-IN">المتجر الأمريكي</span>&quot;, description_ar: &quot;<span lang="hi-IN">بطاقة شحن رصيد لحساب آبل الخاص بك في المتجر الأمريكي</span>. <span lang="hi-IN">تستخدم لشراء التطبيقات، الألعاب، الموسيقى، والأفلام</span>.&quot;, mainImageUrl: &quot;https://placehold.co/600x400/F56565/FFFFFF?text=iTunes+Card+US&amp;font=Almarai&quot;, isFeatured: true, validity: &quot;<span lang="hi-IN">لا يوجد تاريخ انتهاء</span>&quot; },
+            { id: &quot;dummy_ec2&quot;, category: &quot;electronic_cards&quot;, name_ar: &quot;<span lang="hi-IN">بطاقة جوجل بلاي </span>25 <span lang="hi-IN">دولار </span>(<span lang="hi-IN">أمريكي</span>)&quot;, price: 35000, brand_ar: &quot;<span lang="hi-IN">جوجل</span>&quot;, card_type: &quot;<span lang="hi-IN">شحن رصيد</span>&quot;, value: &quot;25 USD&quot;, region: &quot;<span lang="hi-IN">المتجر الأمريكي</span>&quot;, description_ar: &quot;<span lang="hi-IN">اشحن حسابك في جوجل بلاي لشراء تطبيقات وألعاب أندرويد والمزيد</span>.&quot;, mainImageUrl: &quot;https://placehold.co/600x400/48BB78/FFFFFF?text=Google+Play+Card&amp;font=Almarai&quot;, validity: &quot;<span lang="hi-IN">لا يوجد تاريخ انتهاء</span>&quot; },
+            { id: &quot;dummy_ec3&quot;, category: &quot;electronic_cards&quot;, name_ar: &quot;<span lang="hi-IN">اشتراك بلايستيشن بلس </span>(3 <span lang="hi-IN">أشهر </span>- <span lang="hi-IN">عراقي</span>)&quot;, price: 28000, brand_ar: &quot;<span lang="hi-IN">سوني</span>&quot;, card_type: &quot;<span lang="hi-IN">اشتراك خدمة</span>&quot;, value: &quot;3 <span lang="hi-IN">أشهر</span>&quot;, region: &quot;<span lang="hi-IN">المتجر العراقي</span>&quot;, description_ar: &quot;<span lang="hi-IN">اشتراك في خدمة بلايستيشن بلس لمدة </span>3 <span lang="hi-IN">أشهر للعب أونلاين والحصول على ألعاب مجانية شهرية</span>.&quot;, mainImageUrl: &quot;https://placehold.co/600x400/0070D1/FFFFFF?text=PS+Plus+IQ&amp;font=Almarai&quot;, validity: &quot;<span lang="hi-IN">يجب التفعيل خلال سنة</span>&quot; }
+        ];
+
+
+        const firebaseConfigFromGlobal = JSON.parse(window.__firebase_config);
+        const appIdFromGlobal = window.__app_id; 
+
+        let app;
+        let auth;
+        let db;
+        let firebaseInitialized = false;
+        let productsCache = [];
+        let userId = null;
+        let userEmail = null;
+        let cartUnsubscribe = null;
+        let currentCategoryFilter = 'all'; 
+
+        try {
+            app = initializeApp(firebaseConfigFromGlobal);
+            auth = getAuth(app);
+            db = getFirestore(app);
+            firebaseInitialized = true;
+            console.log(&quot;[V20] Firebase initialized. Project ID:&quot;, auth.app.options.projectId);
+            if(document.getElementById('footerAppId')) document.getElementById('footerAppId').textContent = appIdFromGlobal;
+        } catch (error) {
+            logError(&quot;CRITICAL: Firebase initialization failed!&quot;, error);
+        }
+        
+        const pagesNodeList = document.querySelectorAll('.page');
+        const productsGrid = document.getElementById('products-grid-v20'); 
+        const featuredProductsGrid = document.getElementById('featured-products-v20'); 
+        const productDetailContentContainer = document.getElementById('product-detail-content-v20'); 
+        const cartItemsContainer = document.getElementById('cart-items-container-v20'); 
+        const emptyCartMessage = document.getElementById('empty-cart-message-v20'); 
+        const cartSummaryContainer = document.getElementById('cart-summary-v20'); 
+        const cartSubtotalEl = document.getElementById('cart-subtotal-v20'); 
+        const cartTotalEl = document.getElementById('cart-total-v20'); 
+        const cartItemCountEl = document.getElementById('cart-item-count-v20'); 
+        
+        const loginNavButtonHeaderEl = document.getElementById('loginNavButtonHeader');
+        const userProfileButtonHeaderEl = document.getElementById('userProfileButtonHeader');
+        const userIdentifierHeaderEl = document.getElementById('userIdentifierHeader');
+        const footerUserIdElement = document.getElementById('footerUserId');
+        
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileNavMenuEl = document.getElementById('mobileNavMenu');
+        const loginNavButtonMobileEl = document.getElementById('loginNavButtonMobile');
+        const logoutNavButtonMobileEl = document.getElementById('logoutNavButtonMobile');
+
+        const loginFormEl = document.getElementById('loginForm');
+        const registerFormEl = document.getElementById('registerForm');
+        const forgotPasswordFormEl = document.getElementById('forgotPasswordForm');
+        const authErrorElement = document.getElementById('authError');
+        const userProfileInfoContainer = document.getElementById('user-profile-info');
+        const welcomeBox = document.getElementById('welcome-box');
+        const productsPageTitle = document.getElementById('products-page-title');
+
+
+        function showToast(message, duration = 3500, isError = false) {
+            const toast = document.getElementById('toast-notification');
+            const toastMessage = document.getElementById('toast-message');
+            if (toast &amp;&amp; toastMessage) {
+                toastMessage.textContent = message;
+                toast.classList.remove('opacity-0', 'translate-y-full', 'bg-gray-800', 'bg-red-600');
+                toast.classList.add('opacity-100', 'translate-y-0');
+                toast.classList.add(isError ? 'bg-red-600' : 'bg-gray-800');
+                setTimeout(() =&gt; {
+                    toast.classList.remove('opacity-100', 'translate-y-0');
+                    toast.classList.add('opacity-0', 'translate-y-full');
+                }, duration);
+            }
+        }
+        
+        if (mobileMenuButton &amp;&amp; mobileNavMenuEl) {
+            mobileMenuButton.addEventListener('click', (e) =&gt; {
+                e.stopPropagation(); 
+                mobileNavMenuEl.classList.toggle('hidden');
+                if (!mobileNavMenuEl.classList.contains('hidden')) {
+                    mobileNavMenuEl.classList.remove('opacity-0', 'transform', 'translateX(100%)');
+                    mobileNavMenuEl.classList.add('opacity-100', 'transform', 'translateX(0)');
+                } else {
+                    mobileNavMenuEl.classList.remove('opacity-100', 'transform', 'translateX(0)');
+                    mobileNavMenuEl.classList.add('opacity-0', 'transform', 'translateX(100%)');
+                }
+            });
+        }
+        window.closeMobileMenu = () =&gt; {
+            if (mobileNavMenuEl &amp;&amp; !mobileNavMenuEl.classList.contains('hidden')) {
+                mobileNavMenuEl.classList.remove('opacity-100', 'transform', 'translateX(0)');
+                mobileNavMenuEl.classList.add('opacity-0', 'transform', 'translateX(100%)');
+                setTimeout(() =&gt; {
+                    mobileNavMenuEl.classList.add('hidden');
+                }, 300); 
+            }
+        }
+        document.addEventListener('click', (event) =&gt; {
+            if (mobileNavMenuEl &amp;&amp; !mobileNavMenuEl.classList.contains('hidden')) {
+                const isClickInsideMenu = mobileNavMenuEl.contains(event.target);
+                const isClickOnMenuButton = mobileMenuButton.contains(event.target);
+                if (!isClickInsideMenu &amp;&amp; !isClickOnMenuButton) {
+                    closeMobileMenu();
+                }
+            }
+        });
+
+
+        window.navigateTo = function(pageId, params = null) {
+            console.log(`[V20] Navigating to: ${pageId}`, params || '');
+            currentCategoryFilter = (params &amp;&amp; params.category) ? params.category : 'all';
+
+            pagesNodeList.forEach(p =&gt; {
+                if (p &amp;&amp; p.id) { 
+                    p.classList.toggle('hidden', p.id !== pageId);
+                    p.classList.toggle('visible-page-flex', p.id === pageId); // Simplified visibility toggle
+                }
+            });
+            const targetPage = document.getElementById(pageId);
+            if (!targetPage) {
+                 logError(`Navigation error: Page with ID '${pageId}' not found.`);
+                 return;
+            }
+            window.scrollTo(0,0); 
+            
+            document.querySelectorAll('.nav-link, .nav-link-mobile').forEach(link =&gt; {
+                link.classList.remove('active');
+                const linkPage = link.dataset.page;
+                const linkCategory = link.dataset.category; // Used for category-specific links in mobile nav
+                if (linkPage === pageId &amp;&amp; (linkPage !== 'products' || !linkCategory || linkCategory === currentCategoryFilter)) {
+                    link.classList.add('active');
+                }
+            });
+
+            document.querySelectorAll('.category-link').forEach(link =&gt; {
+                link.classList.remove('active');
+                if (link.dataset.category === currentCategoryFilter) {
+                    link.classList.add('active');
+                }
+            });
+            
+            if (pageId === 'home') {
+                displayFeaturedProducts();
+                if (welcomeBox &amp;&amp; !sessionStorage.getItem('welcomeBoxShown_v20')) {
+                     welcomeBox.classList.remove('hidden');
+                     setTimeout(() =&gt; welcomeBox.classList.add('visible'), 50); 
+                     sessionStorage.setItem('welcomeBoxShown_v20', 'true'); 
+                }
+            }
+            else if (pageId === 'products') {
+                displayAllProducts(currentCategoryFilter);
+                 if (productsPageTitle) {
+                    let titleText = &quot;<span lang="hi-IN">جميع المنتجات</span>&quot;;
+                    if (currentCategoryFilter === 'new_phones') titleText = &quot;<span lang="hi-IN">الهواتف الجديدة</span>&quot;;
+                    else if (currentCategoryFilter === 'used_phones') titleText = &quot;<span lang="hi-IN">الهواتف المستخدمة</span>&quot;;
+                    else if (currentCategoryFilter === 'electronic_cards') titleText = &quot;<span lang="hi-IN">البطاقات الإلكترونية</span>&quot;;
+                    productsPageTitle.textContent = titleText;
+                }
+            }
+            else if (pageId === 'product-detail' &amp;&amp; params &amp;&amp; params.id) displayProductDetail(params.id);
+            else if (pageId === 'cart') displayCart(); 
+            else if (pageId === 'auth') window.showAuthForm('login'); 
+            else if (pageId === 'profile') displayUserProfile();
+            else if (pageId === 'admin-panel') console.log(&quot;Navigated to Admin Panel (Placeholder)&quot;); // Placeholder action
+        }
+
+        const productsCollectionPath = () =&gt; `artifacts/${appIdFromGlobal}/public/data/products`;
+        const productDocPath = (prodId) =&gt; `artifacts/${appIdFromGlobal}/public/data/products/${prodId}`;
+        const userCartCollectionPath = () =&gt; {
+            if (!userId) {
+                console.warn(&quot;[V20] User ID is null, cannot get cart path.&quot;);
+                return null; 
+            }
+            return `artifacts/${appIdFromGlobal}/users/${userId}/cartItems`;
+        };
+        
+        async function fetchProducts() {
+            // Priority 1: Return cached real (non-dummy) products if available
+            if (productsCache.length &gt; 0 &amp;&amp; !productsCache.every(p =&gt; p.id.startsWith(&quot;dummy_&quot;))) {
+                 console.log(&quot;[V20] Returning cached real products.&quot;);
+                 return productsCache;
+            }
+
+            // Priority 2: Fetch from Firebase if initialized
+            if (firebaseInitialized &amp;&amp; db) {
+                try {
+                    const productSnapshot = await getDocs(firestoreQuery(collection(db, productsCollectionPath())));
+                    if (!productSnapshot.empty) {
+                        console.log(&quot;[V20] Fetched products from Firestore.&quot;);
+                        productsCache = productSnapshot.docs.map(d =&gt; ({ id: d.id, ...d.data() }));
+                    } else {
+                        // Firestore is empty, fall back to dummies if cache is also empty or only dummies
+                        console.warn(&quot;[V20] Firestore returned 0 products. Using dummy data as fallback.&quot;);
+                        if (productsCache.length === 0 || productsCache.every(p =&gt; p.id.startsWith(&quot;dummy_&quot;))) {
+                            productsCache = [...dummyProducts];
+                        }
+                    }
+                } catch (error) {
+                    logError(&quot;Error fetching products from Firestore, using dummy data as fallback:&quot;, error);
+                    // On error, ensure dummies are used if cache isn't already real data
+                    if (productsCache.length === 0 || productsCache.every(p =&gt; p.id.startsWith(&quot;dummy_&quot;))) {
+                        productsCache = [...dummyProducts];
+                    }
+                }
+            } else {
+                // Firebase not initialized, use dummies
+                logError(&quot;Firebase not ready for fetching products. Using dummy data.&quot;);
+                if (productsCache.length === 0 || productsCache.every(p =&gt; p.id.startsWith(&quot;dummy_&quot;))) {
+                    productsCache = [...dummyProducts];
+                }
+            }
+            
+            // Ensure productsCache is not empty if dummyProducts exist
+            if (productsCache.length === 0 &amp;&amp; dummyProducts.length &gt; 0) {
+                console.warn(&quot;[V20] productsCache was empty after all attempts, forcing dummy data.&quot;);
+                productsCache = [...dummyProducts];
+            }
+            
+            productsCache.sort((a, b) =&gt; (a.name_ar || &quot;&quot;).localeCompare(b.name_ar || &quot;&quot;));
+            console.log(`[V20] Final productsCache for use, count: ${productsCache.length}`);
+            return productsCache;
+        }
+
+
+        function createProductCard(product, isHorizontalScrollItem = false) { 
+            if (!product || !product.id) return null; 
+            const card = document.createElement('div');
+            // Add classes for horizontal scroll if applicable
+            card.className = `product-card group relative ${isHorizontalScrollItem ? 'w-64 sm:w-72 md:w-80 flex-shrink-0' : ''}`;
+            
+            const name = product.name_ar || '<span lang="hi-IN">منتج غير متوفر</span>';
+            const price = product.price ? parseFloat(product.price).toLocaleString('ar-IQ', { style: 'currency', currency: 'IQD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) : '<span lang="hi-IN">غير محدد</span>';
+            const imageUrl = product.mainImageUrl || product.imageUrl || `https://placehold.co/600x400/CBD5E0/718096?text=${encodeURIComponent(name.substring(0,10))}&amp;font=Almarai`;
+            
+            let badgeHTML = '';
+            if (product.isNew) {
+                badgeHTML = '&lt;span class=&quot;product-badge badge-new&quot;&gt;<span lang="hi-IN">جديد </span>&lt;i class=&quot;fas fa-certificate ml-1&quot;&gt;&lt;/i&gt;&lt;/span&gt;';
+            } else if (product.isHot) {
+                badgeHTML = '&lt;span class=&quot;product-badge badge-hot&quot;&gt;<span lang="hi-IN">رائج </span>&lt;i class=&quot;fas fa-fire ml-1&quot;&gt;&lt;/i&gt;&lt;/span&gt;';
+            } else if (product.category === 'used_phones') {
+                 badgeHTML = '&lt;span class=&quot;product-badge badge-used&quot;&gt;<span lang="hi-IN">مستخدم </span>&lt;i class=&quot;fas fa-recycle ml-1&quot;&gt;&lt;/i&gt;&lt;/span&gt;';
+            }
+
+
+            card.innerHTML = `
+                ${badgeHTML}
+                &lt;div class=&quot;product-card-image-wrapper&quot;&gt;
+                    &lt;img src=&quot;${imageUrl}&quot; alt=&quot;${name}&quot; class=&quot;product-card-image&quot; onerror=&quot;this.onerror=null; this.src='https://placehold.co/600x400/CBD5E0/718096?text=<span lang="hi-IN">خطأ</span>+<span lang="hi-IN">بالصورة</span>&amp;font=Almarai';&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;p-4 flex flex-col flex-grow&quot;&gt;
+                    &lt;h3 class=&quot;text-md sm:text-lg font-bold mb-2 text-text-primary h-14 overflow-hidden group-hover:text-brand-primary transition-colors&quot;&gt;${name}&lt;/h3&gt;
+                    &lt;p class=&quot;text-brand-primary font-black text-lg sm:text-xl mb-3&quot;&gt;${price}&lt;/p&gt;
+                    &lt;div class=&quot;text-xs text-text-secondary mb-3 space-y-1&quot;&gt;
+                        ${product.brand_ar ? `&lt;p&gt;&lt;i class=&quot;fas fa-tag fa-fw mr-1 text-gray-400&quot;&gt;&lt;/i&gt; ${product.brand_ar}&lt;/p&gt;` : ''}
+                        ${product.condition_ar &amp;&amp; product.category !== 'electronic_cards' ? `&lt;p&gt;&lt;i class=&quot;fas fa-check-circle fa-fw mr-1 text-gray-400&quot;&gt;&lt;/i&gt; ${product.condition_ar}&lt;/p&gt;` : ''}
+                        ${product.category === 'electronic_cards' &amp;&amp; product.value ? `&lt;p&gt;&lt;i class=&quot;fas fa-credit-card fa-fw mr-1 text-gray-400&quot;&gt;&lt;/i&gt; <span lang="hi-IN">القيمة</span>: ${product.value}&lt;/p&gt;` : ''}
+                        &lt;p class=&quot;delivery-available-icon&quot;&gt;&lt;i class=&quot;fas fa-shipping-fast fa-fw mr-1&quot;&gt;&lt;/i&gt; <span lang="hi-IN">متوفر توصيل</span>&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mt-auto grid grid-cols-2 gap-2 pt-3 border-t border-border-color&quot;&gt;
+                        &lt;button onclick=&quot;event.stopPropagation(); navigateTo('product-detail', { id: '${product.id}' })&quot; class=&quot;btn btn-ghost !text-xs sm:!text-sm w-full !py-2 !px-1&quot;&gt;&lt;i class=&quot;fas fa-eye mr-1&quot;&gt;&lt;/i&gt;<span lang="hi-IN">التفاصيل</span>&lt;/button&gt;
+                        &lt;button onclick=&quot;event.stopPropagation(); window.addToCart(event, '${product.id}')&quot; class=&quot;btn btn-primary !text-xs sm:!text-sm w-full !py-2 !px-1&quot;&gt;&lt;i class=&quot;fas fa-cart-plus mr-1&quot;&gt;&lt;/i&gt;<span lang="hi-IN">أضف للسلة</span>&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;`;
+            return card;
+        }
+
+        async function displayProductList(gridElement, skeletonCount, featured = false, category = 'all') {
+            if (!gridElement) {
+                logError(`Grid element for products (featured: ${featured}, category: ${category}) not found.`);
+                return;
+            }
+            gridElement.innerHTML = ''; // Clear previous content
+            for (let i = 0; i &lt; skeletonCount; i++) {
+                const skeleton = document.createElement('div');
+                skeleton.className = `skeleton-loader h-96 rounded-xl ${featured ? 'w-72 flex-shrink-0' : 'w-full'}`;
+                gridElement.appendChild(skeleton);
+            }
+
+            const allProducts = await fetchProducts();
+            let productsToDisplay;
+
+            if (featured) {
+                productsToDisplay = allProducts.filter(p =&gt; p.isFeatured);
+                if (category !== 'all') { // Though featured usually shows from 'all'
+                    productsToDisplay = productsToDisplay.filter(p =&gt; p.category === category);
+                }
+                productsToDisplay = productsToDisplay.slice(0, 4); // Limit to 4 featured
+
+                // Fallback if no specifically featured products are found
+                if (productsToDisplay.length === 0) {
+                    console.warn(`No featured products found for category '${category}', showing first 4 overall.`);
+                    productsToDisplay = allProducts.slice(0, 4);
+                }
+            } else { // Not featured (main products page or category page)
+                if (category !== 'all') {
+                    productsToDisplay = allProducts.filter(p =&gt; p.category === category);
+                } else {
+                    productsToDisplay = allProducts; // All products
+                }
+            }
+            
+            gridElement.innerHTML = ''; // Clear skeletons
+
+            if (productsToDisplay.length === 0) {
+                let categoryName = &quot;<span lang="hi-IN">المنتجات</span>&quot;;
+                if(category === 'new_phones') categoryName = &quot;<span lang="hi-IN">الهواتف الجديدة</span>&quot;;
+                else if(category === 'used_phones') categoryName = &quot;<span lang="hi-IN">الهواتف المستخدمة</span>&quot;;
+                else if(category === 'electronic_cards') categoryName = &quot;<span lang="hi-IN">البطاقات الإلكترونية</span>&quot;;
+                else if(featured) categoryName = &quot;<span lang="hi-IN">العروض المميزة</span>&quot;;
+                
+                gridElement.innerHTML = `&lt;p class=&quot;col-span-full text-center text-text-light py-10 text-lg w-full&quot;&gt;<span lang="hi-IN">لا توجد </span>${categoryName} <span lang="hi-IN">حالياً </span>${category !== 'all' &amp;&amp; !featured ? '<span lang="hi-IN">في هذه الفئة</span>' : ''}.&lt;/p&gt;`;
+                return;
+            }
+
+            productsToDisplay.forEach(p =&gt; {
+                const cardWrapper = document.createElement('div');
+                if (featured) { // Add wrapper for horizontal scroll items if needed by styling
+                    cardWrapper.className = 'horizontal-scroll-item'; 
+                }
+                const card = createProductCard(p, featured); // Pass featured flag to adjust card width
+                if (card) {
+                    cardWrapper.appendChild(card);
+                    gridElement.appendChild(cardWrapper);
+                }
+            });
+        }
+
+        const displayAllProducts = (category = 'all') =&gt; displayProductList(productsGrid, 8, false, category); 
+        const displayFeaturedProducts = () =&gt; displayProductList(featuredProductsGrid, 4, true, 'all');
+
+
+        async function displayProductDetail(productId) { 
+            if (!productDetailContentContainer) { logError(&quot;Product detail container not found.&quot;); return; }
+            productDetailContentContainer.innerHTML = '&lt;div class=&quot;text-center py-20&quot;&gt;&lt;div class=&quot;animate-spin rounded-full h-16 w-16 border-b-4 border-brand-primary mx-auto&quot;&gt;&lt;/div&gt;&lt;p class=&quot;text-text-secondary text-lg mt-6&quot;&gt;<span lang="hi-IN">جاري تحميل تفاصيل المنتج</span>...&lt;/p&gt;&lt;/div&gt;';
+            
+            const allProducts = await fetchProducts(); 
+            let product = allProducts.find(p =&gt; p.id === productId);
+
+            if (!product &amp;&amp; firebaseInitialized &amp;&amp; db &amp;&amp; !productId.startsWith(&quot;dummy&quot;)) { 
+                try {
+                    const docSnap = await getDoc(doc(db, productDocPath(productId)));
+                    if (docSnap.exists()) product = { id: docSnap.id, ...docSnap.data() };
+                } catch (err) {
+                    logError(`Error fetching product ${productId} from Firestore:`, err);
+                }
+            }
+
+            if (!product) {
+                productDetailContentContainer.innerHTML = '&lt;p class=&quot;text-center text-text-light py-10 text-lg&quot;&gt;<span lang="hi-IN">المنتج المطلوب غير موجود</span>.&lt;/p&gt;'; return;
+            }
+            const name = product.name_ar || '<span lang="hi-IN">اسم المنتج غير متوفر</span>';
+            const price = product.price ? parseFloat(product.price).toLocaleString('ar-IQ', { style: 'currency', currency: 'IQD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) : '<span lang="hi-IN">السعر غير محدد</span>';
+            
+            const mainImage = product.mainImageUrl || product.imageUrl || `https://placehold.co/800x600/E2E8F0/A0AEC0?text=${encodeURIComponent(name.substring(0,15))}&amp;font=Almarai`;
+            const otherImages = product.otherImageUrls || []; 
+
+            let thumbnailsHTML = '';
+            const allDisplayImages = [mainImage, ...otherImages.filter(url =&gt; url &amp;&amp; url.trim() !== '' &amp;&amp; url !== mainImage)]; 
+
+            if (allDisplayImages.length &gt; 1) { 
+                 thumbnailsHTML = `&lt;div class=&quot;thumbnail-gallery flex space-x-3 space-x-reverse mt-6 overflow-x-auto pb-2&quot;&gt;
+                    ${allDisplayImages.map((imgUrl, index) =&gt; `&lt;img src=&quot;${imgUrl}&quot; alt=&quot;<span lang="hi-IN">صورة مصغرة </span>${index + 1} <span lang="hi-IN">لـ </span>${name}&quot; class=&quot;h-20 w-20 sm:h-24 sm:w-24 object-contain bg-gray-100 p-1 rounded-md ${index === 0 ? 'active-thumbnail' : ''}&quot; onclick=&quot;updateMainProductImage(this, '${imgUrl}')&quot; onerror=&quot;this.style.display='none'&quot;&gt;`).join('')}
+                &lt;/div&gt;`;
+            }
+            
+            let specsHTML = '&lt;h3 class=&quot;font-bold text-xl text-text-primary mt-6 mb-3&quot;&gt;<span lang="hi-IN">المواصفات الرئيسية</span>:&lt;/h3&gt;&lt;div class=&quot;specs-grid mb-6&quot;&gt;';
+            let hasSpecs = false;
+            if (product.specs) {
+                for (const key in product.specs) {
+                    specsHTML += `&lt;div class=&quot;spec-item&quot;&gt;&lt;span class=&quot;spec-label&quot;&gt;${key.replace(/_/g, ' ').replace(/\b\w/g, l =&gt; l.toUpperCase())}: &lt;/span&gt;&lt;span class=&quot;spec-value&quot;&gt;${product.specs[key]}&lt;/span&gt;&lt;/div&gt;`;
+                    hasSpecs = true;
+                }
+            } else if (product.category === 'electronic_cards') {
+                if(product.value) { specsHTML += `&lt;div class=&quot;spec-item&quot;&gt;&lt;span class=&quot;spec-label&quot;&gt;<span lang="hi-IN">القيمة</span>: &lt;/span&gt;&lt;span class=&quot;spec-value&quot;&gt;${product.value}&lt;/span&gt;&lt;/div&gt;`; hasSpecs = true; }
+                if(product.region) { specsHTML += `&lt;div class=&quot;spec-item&quot;&gt;&lt;span class=&quot;spec-label&quot;&gt;<span lang="hi-IN">المنطقة</span>: &lt;/span&gt;&lt;span class=&quot;spec-value&quot;&gt;${product.region}&lt;/span&gt;&lt;/div&gt;`; hasSpecs = true; }
+                if(product.validity) { specsHTML += `&lt;div class=&quot;spec-item&quot;&gt;&lt;span class=&quot;spec-label&quot;&gt;<span lang="hi-IN">الصلاحية</span>: &lt;/span&gt;&lt;span class=&quot;spec-value&quot;&gt;${product.validity}&lt;/span&gt;&lt;/div&gt;`; hasSpecs = true; }
+                if(product.card_type) { specsHTML += `&lt;div class=&quot;spec-item&quot;&gt;&lt;span class=&quot;spec-label&quot;&gt;<span lang="hi-IN">نوع البطاقة</span>: &lt;/span&gt;&lt;span class=&quot;spec-value&quot;&gt;${product.card_type}&lt;/span&gt;&lt;/div&gt;`; hasSpecs = true; }
+            }
+            
+            if (!hasSpecs) {
+                specsHTML += '&lt;p class=&quot;text-sm text-text-secondary col-span-full&quot;&gt;<span lang="hi-IN">لا توجد مواصفات إضافية متوفرة حالياً</span>.&lt;/p&gt;';
+            }
+            specsHTML += '&lt;/div&gt;';
+
+
+            productDetailContentContainer.innerHTML = `
+                &lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start&quot;&gt;
+                    &lt;div class=&quot;md:sticky md:top-24&quot;&gt; 
+                        &lt;img id=&quot;mainProductImage&quot; src=&quot;${mainImage}&quot; alt=&quot;${name}&quot; class=&quot;w-full h-auto max-h-[75vh] object-contain rounded-xl shadow-card border border-border-color mb-4 bg-gray-50 p-2&quot; onerror=&quot;this.onerror=null; this.src='https://placehold.co/800x600/CBD5E0/718096?text=<span lang="hi-IN">خطأ</span>+<span lang="hi-IN">بالصورة</span>&amp;font=Almarai';&quot;&gt;
+                        ${thumbnailsHTML}
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h1 class=&quot;text-2xl lg:text-3xl font-bold text-text-primary mb-2 leading-tight&quot;&gt;${name}&lt;/h1&gt;
+                        &lt;p class=&quot;text-brand-primary font-black text-2xl lg:text-3xl mb-5&quot;&gt;${price}&lt;/p&gt;
+                        
+                        &lt;div class=&quot;flex items-center mb-4&quot;&gt;
+                            &lt;div class=&quot;star-rating flex text-xl&quot;&gt;
+                                &lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            &lt;span class=&quot;text-sm text-text-secondary mr-2&quot;&gt;(0 <span lang="hi-IN">تقييمات</span>)&lt;/span&gt;
+                            &lt;a href=&quot;#reviews-section&quot; class=&quot;text-sm text-brand-primary hover:underline mr-3&quot;&gt;<span lang="hi-IN">أضف تقييمك</span>&lt;/a&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;space-y-2 text-text-secondary mb-6 text-sm border-t border-b border-border-color py-5&quot;&gt;
+                            ${product.brand_ar ? `&lt;p class=&quot;flex items-center&quot;&gt;&lt;i class=&quot;fas fa-tag fa-fw mr-2 text-brand-primary text-md&quot;&gt;&lt;/i&gt;&lt;span class=&quot;font-semibold text-text-primary ml-1&quot;&gt;<span lang="hi-IN">الماركة</span>:&lt;/span&gt; ${product.brand_ar}&lt;/p&gt;` : ''}
+                            ${product.condition_ar &amp;&amp; product.category !== 'electronic_cards' ? `&lt;p class=&quot;flex items-center&quot;&gt;&lt;i class=&quot;fas fa-check-circle fa-fw mr-2 text-brand-primary text-md&quot;&gt;&lt;/i&gt;&lt;span class=&quot;font-semibold text-text-primary ml-1&quot;&gt;<span lang="hi-IN">الحالة</span>:&lt;/span&gt; ${product.condition_ar}&lt;/p&gt;` : ''}
+                            ${product.category === 'used_phones' &amp;&amp; product.usage_details ? `&lt;p class=&quot;flex items-center&quot;&gt;&lt;i class=&quot;fas fa-history fa-fw mr-2 text-brand-warning text-md&quot;&gt;&lt;/i&gt;&lt;span class=&quot;font-semibold text-text-primary ml-1&quot;&gt;<span lang="hi-IN">تفاصيل الاستخدام</span>:&lt;/span&gt; ${product.usage_details}&lt;/p&gt;` : ''}
+                            &lt;p class=&quot;flex items-center delivery-available-icon&quot;&gt;&lt;i class=&quot;fas fa-shipping-fast fa-fw mr-2 text-md&quot;&gt;&lt;/i&gt;&lt;span class=&quot;font-semibold text-text-primary ml-1&quot;&gt;<span lang="hi-IN">التوصيل</span>:&lt;/span&gt; <span lang="hi-IN">متوفر لجميع المحافظات</span>&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class=&quot;font-bold text-lg text-text-primary mb-2&quot;&gt;<span lang="hi-IN">الوصف</span>:&lt;/h3&gt;
+                        &lt;p class=&quot;text-text-secondary leading-relaxed mb-6 text-sm whitespace-pre-line&quot;&gt;${product.description_ar || '<span lang="hi-IN">لا يتوفر وصف لهذا المنتج</span>.'}&lt;/p&gt;
+                        &lt;button onclick=&quot;window.addToCart(event, '${product.id}')&quot; class=&quot;btn btn-primary w-full text-md py-3&quot;&gt;&lt;i class=&quot;fas fa-cart-plus mr-2&quot;&gt;&lt;/i&gt;<span lang="hi-IN">أضف إلى السلة</span>&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                ${hasSpecs ? specsHTML : ''}
+
+                &lt;section id=&quot;reviews-section&quot; class=&quot;mt-10 pt-6 border-t border-border-color&quot;&gt;
+                    &lt;h3 class=&quot;text-2xl font-bold text-text-primary mb-6&quot;&gt;<span lang="hi-IN">التقييمات والتعليقات</span>&lt;/h3&gt;
+                    &lt;div class=&quot;mb-8 p-4 bg-gray-50 rounded-lg&quot;&gt;
+                        &lt;h4 class=&quot;text-lg font-semibold text-text-primary mb-3&quot;&gt;<span lang="hi-IN">أضف تقييمك وتعليقك</span>&lt;/h4&gt;
+                        &lt;form id=&quot;comment-form-placeholder&quot;&gt;
+                            &lt;div class=&quot;mb-3&quot;&gt;
+                                &lt;label class=&quot;block text-sm font-medium text-text-secondary mb-1&quot;&gt;<span lang="hi-IN">تقييمك بالنجوم</span>:&lt;/label&gt;
+                                &lt;div class=&quot;star-rating flex text-2xl&quot;&gt;
+                                    &lt;i class=&quot;far fa-star&quot; data-value=&quot;1&quot;&gt;&lt;/i&gt;
+                                    &lt;i class=&quot;far fa-star&quot; data-value=&quot;2&quot;&gt;&lt;/i&gt;
+                                    &lt;i class=&quot;far fa-star&quot; data-value=&quot;3&quot;&gt;&lt;/i&gt;
+                                    &lt;i class=&quot;far fa-star&quot; data-value=&quot;4&quot;&gt;&lt;/i&gt;
+                                    &lt;i class=&quot;far fa-star&quot; data-value=&quot;5&quot;&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;mb-3&quot;&gt;
+                                &lt;label for=&quot;comment-text&quot; class=&quot;block text-sm font-medium text-text-secondary mb-1&quot;&gt;<span lang="hi-IN">تعليقك</span>:&lt;/label&gt;
+                                &lt;textarea id=&quot;comment-text&quot; name=&quot;comment-text&quot; rows=&quot;4&quot; class=&quot;w-full input-field comment-form&quot; placeholder=&quot;<span lang="hi-IN">اكتب تعليقك هنا</span>...&quot;&gt;&lt;/textarea&gt;
+                            &lt;/div&gt;
+                            &lt;button type=&quot;submit&quot; class=&quot;btn btn-secondary&quot;&gt;&lt;i class=&quot;fas fa-paper-plane mr-2&quot;&gt;&lt;/i&gt;<span lang="hi-IN">إرسال التعليق</span>&lt;/button&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                    &lt;div id=&quot;comments-list-placeholder&quot;&gt;
+                        &lt;p class=&quot;text-text-secondary text-center py-4&quot;&gt;<span lang="hi-IN">لا توجد تعليقات حتى الآن</span>. <span lang="hi-IN">كن أول من يضيف تعليقاً</span>!&lt;/p&gt;
+                        &lt;/div&gt;
+                &lt;/section&gt;
+
+                &lt;button onclick=&quot;event.preventDefault(); navigateTo('products', { category: currentCategoryFilter })&quot; class=&quot;btn btn-ghost mt-10 text-sm&quot;&gt;&lt;i class=&quot;fas fa-arrow-left mr-2&quot;&gt;&lt;/i&gt;<span lang="hi-IN">العودة لقائمة المنتجات</span>&lt;/button&gt;`;
+            
+            const stars = productDetailContentContainer.querySelectorAll('#comment-form-placeholder .star-rating .far.fa-star');
+            stars.forEach(star =&gt; {
+                star.addEventListener('click', () =&gt; {
+                    const value = star.dataset.value;
+                    stars.forEach(s =&gt; {
+                        s.classList.remove('fas');
+                        s.classList.add('far');
+                        if (s.dataset.value &lt;= value) {
+                            s.classList.remove('far');
+                            s.classList.add('fas');
+                        }
+                    });
+                    console.log(`User rated: ${value} stars (placeholder)`);
+                });
+            });
+            document.getElementById('comment-form-placeholder')?.addEventListener('submit', (e) =&gt; {
+                e.preventDefault();
+                showToast(&quot;<span lang="hi-IN">شكراً لتعليقك</span>! (<span lang="hi-IN">هذه واجهة تجريبية</span>)&quot;, 3000);
+            });
+
+        }
+        window.updateMainProductImage = (thumbnailElement, newImageUrl) =&gt; { 
+            const mainImageElement = document.getElementById('mainProductImage');
+            if (mainImageElement) {
+                mainImageElement.src = newImageUrl;
+                document.querySelectorAll('.thumbnail-gallery img').forEach(img =&gt; img.classList.remove('active-thumbnail'));
+                thumbnailElement.classList.add('active-thumbnail');
+            }
+        };
+
+        window.addToCart = async function(event, productId) { 
+            console.log(`[V20] addToCart called for productId: ${productId}`);
+            if (!userId) { 
+                showToast(&quot;<span lang="hi-IN">يرجى تسجيل الدخول أولاً لإضافة منتجات إلى السلة</span>. <span lang="hi-IN">سيتم توجيهك لصفحة الدخول</span>.&quot;, 4000, true); 
+                setTimeout(() =&gt; navigateTo('auth'), 1000); 
+                return; 
+            }
+            if (!firebaseInitialized || !db) { showToast(&quot;<span lang="hi-IN">خطأ في الاتصال بالخادم</span>.&quot;, 3000, true); return; }
+            const cartPath = userCartCollectionPath();
+            if (!cartPath) { showToast(&quot;<span lang="hi-IN">خطأ في تهيئة السلة</span>.&quot;, 3000, true); return; }
+            
+            const addButton = event.currentTarget; 
+            if(addButton) {
+                addButton.disabled = true; 
+                addButton.innerHTML = '&lt;i class=&quot;fas fa-spinner fa-spin mr-2&quot;&gt;&lt;/i&gt; <span lang="hi-IN">جار الإضافة</span>...'; 
+            }
+
+            try {
+                const allProducts = await fetchProducts(); 
+                let productToAdd = allProducts.find(p =&gt; p.id === productId);
+
+                if (!productToAdd &amp;&amp; !productId.startsWith(&quot;dummy&quot;)) { 
+                    const docRef = doc(db, productDocPath(productId));
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) productToAdd = { id: docSnap.id, ...docSnap.data() };
+                }
+                
+                if (!productToAdd) {
+                    showToast(&quot;<span lang="hi-IN">المنتج غير متوفر حالياً</span>.&quot;, 3000, true); 
+                    if(addButton) {
+                        addButton.disabled = false; 
+                        addButton.innerHTML = '&lt;i class=&quot;fas fa-cart-plus mr-1 sm:mr-2&quot;&gt;&lt;/i&gt;<span lang="hi-IN">أضف للسلة</span>';
+                    }
+                    return;
+                }
+
+
+                const cartColRef = collection(db, cartPath);
+                const itemQuery = firestoreQuery(cartColRef, where(&quot;productId&quot;, &quot;==&quot;, productId));
+                const querySnapshot = await getDocs(itemQuery);
+
+                if (!querySnapshot.empty) { 
+                    const existingItemDoc = querySnapshot.docs[0];
+                    const newQuantity = (existingItemDoc.data().quantity || 1) + 1;
+                    await updateDoc(existingItemDoc.ref, { quantity: newQuantity });
+                    showToast(`<span lang="hi-IN">تم تحديث كمية </span>&quot;${productToAdd.name_ar || '<span lang="hi-IN">المنتج</span>'}&quot; <span lang="hi-IN">بنجاح</span>.`);
+                } else { 
+                    await addDoc(cartColRef, {
+                        productId: productId, 
+                        name_ar: productToAdd.name_ar || &quot;<span lang="hi-IN">منتج</span>&quot;, 
+                        price: productToAdd.price || 0,
+                        imageUrl: productToAdd.mainImageUrl || productToAdd.imageUrl || &quot;&quot;, 
+                        quantity: 1, 
+                        addedAt: Timestamp.now()
+                    });
+                    showToast(`<span lang="hi-IN">تمت إضافة </span>&quot;${productToAdd.name_ar || '<span lang="hi-IN">المنتج</span>'}&quot; <span lang="hi-IN">للسلة بنجاح</span>!`);
+                }
+            } catch (error) {
+                logError(`Error adding to cart ${productId}:`, error);
+                showToast(&quot;<span lang="hi-IN">خطأ أثناء إضافة المنتج للسلة</span>.&quot;, 3000, true);
+            } finally {
+                if(addButton) {
+                    addButton.disabled = false; 
+                    addButton.innerHTML = '&lt;i class=&quot;fas fa-cart-plus mr-1 sm:mr-2&quot;&gt;&lt;/i&gt;<span lang="hi-IN">أضف للسلة</span>';
+                }
+            }
+        };
+        function renderCartItems(cartItems) { 
+            if (!cartItemsContainer || !emptyCartMessage) { logError(&quot;Cart items container or empty message element not found.&quot;); return; }
+            
+            emptyCartMessage.classList.toggle('hidden', cartItems.length &gt; 0);
+            cartItemsContainer.innerHTML = ''; 
+
+            if (cartItems.length &gt; 0) {
+                const ul = document.createElement('ul');
+                ul.className = &quot;-my-6 divide-y divide-border-color&quot;;
+                ul.setAttribute('role', 'list');
+                cartItems.forEach(item =&gt; {
+                    const name = item.name_ar || '<span lang="hi-IN">منتج غير معروف</span>';
+                    const price = item.price ? parseFloat(item.price).toLocaleString('ar-IQ', { style: 'currency', currency: 'IQD', minimumFractionDigits:0, maximumFractionDigits:0}) : '<span lang="hi-IN">السعر غير محدد</span>';
+                    const imageUrl = item.imageUrl || `https://placehold.co/100x100/CBD5E0/718096?text=${encodeURIComponent(name.substring(0,5))}&amp;font=Almarai`;
+                    const quantity = item.quantity || 1;
+                    const li = document.createElement('li');
+                    li.className = &quot;flex py-6 items-center&quot;;
+                    li.innerHTML = `
+                        &lt;div class=&quot;h-20 w-20 sm:h-24 sm:w-24 shrink-0 overflow-hidden rounded-lg border border-border-color bg-gray-50 p-1&quot;&gt;&lt;img src=&quot;${imageUrl}&quot; alt=&quot;${name}&quot; class=&quot;h-full w-full object-contain&quot; onerror=&quot;this.onerror=null; this.src='https://placehold.co/100x100/CBD5E0/718096?text=<span lang="hi-IN">خطأ</span>&amp;font=Almarai';&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;ml-4 mr-4 flex flex-1 flex-col&quot;&gt;
+                            &lt;div&gt;&lt;div class=&quot;flex justify-between text-sm sm:text-base font-semibold text-text-primary&quot;&gt;&lt;h3 class=&quot;hover:text-brand-primary transition-colors&quot;&gt;&lt;a href=&quot;#&quot; onclick=&quot;event.preventDefault(); navigateTo('product-detail', { id: '${item.productId}' })&quot;&gt;${name}&lt;/a&gt;&lt;/h3&gt;&lt;p class=&quot;ml-4&quot;&gt;${price}&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+                            &lt;div class=&quot;flex flex-1 items-center justify-between text-xs sm:text-sm mt-2&quot;&gt;
+                                &lt;div class=&quot;flex items-center&quot;&gt;
+                                    &lt;button onclick=&quot;window.updateCartItemQuantity('${item.id}', ${quantity - 1})&quot; class=&quot;text-brand-primary p-1 rounded-full hover:bg-brand-primary-alpha disabled:opacity-50 disabled:cursor-not-allowed&quot; ${quantity &lt;= 1 ? 'disabled' : ''} aria-label=&quot;Decrease quantity&quot;&gt;&lt;i class=&quot;fas fa-minus-circle text-md sm:text-lg&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                                    &lt;p class=&quot;text-text-primary font-medium mx-2 sm:mx-3 text-sm sm:text-md&quot;&gt;<span lang="hi-IN">الكمية</span>: ${quantity}&lt;/p&gt;
+                                    &lt;button onclick=&quot;window.updateCartItemQuantity('${item.id}', ${quantity + 1})&quot; class=&quot;text-brand-primary p-1 rounded-full hover:bg-brand-primary-alpha&quot; aria-label=&quot;Increase quantity&quot;&gt;&lt;i class=&quot;fas fa-plus-circle text-md sm:text-lg&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;flex&quot;&gt;&lt;button type=&quot;button&quot; onclick=&quot;window.removeFromCart('${item.id}')&quot; class=&quot;font-medium text-danger hover:text-red-700 flex items-center text-xs sm:text-sm&quot;&gt;&lt;i class=&quot;fas fa-trash-alt mr-1&quot;&gt;&lt;/i&gt;<span lang="hi-IN">إزالة</span>&lt;/button&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;`;
+                    ul.appendChild(li);
+                });
+                cartItemsContainer.appendChild(ul);
+            }
+        };
+        
+        window.updateCartItemQuantity = async function(itemId, newQuantity) {
+            if (!userId || !firebaseInitialized || !db) {
+                showToast(&quot;<span lang="hi-IN">خطأ في الاتصال أو المصادقة</span>.&quot;, 3000, true);
+                return;
+            }
+            if (newQuantity &lt; 0) return; 
+
+            const cartPath = userCartCollectionPath();
+            if (!cartPath) { showToast(&quot;<span lang="hi-IN">خطأ في تهيئة السلة</span>.&quot;, 3000, true); return; }
+
+            try {
+                const itemRef = doc(db, cartPath, itemId);
+                if (newQuantity === 0) { 
+                    await deleteDoc(itemRef);
+                    showToast(&quot;<span lang="hi-IN">تمت إزالة المنتج من السلة</span>.&quot;);
+                } else {
+                    await updateDoc(itemRef, { quantity: newQuantity });
+                }
+            } catch (error) {
+                logError(`Error updating cart item ${itemId} quantity to ${newQuantity}:`, error);
+                showToast(&quot;<span lang="hi-IN">خطأ أثناء تحديث كمية المنتج</span>.&quot;, 3000, true);
+            }
+        };
+
+        window.removeFromCart = async function(itemId) {
+            if (!userId || !firebaseInitialized || !db) {
+                showToast(&quot;<span lang="hi-IN">خطأ في الاتصال أو المصادقة</span>.&quot;, 3000, true);
+                return;
+            }
+            const cartPath = userCartCollectionPath();
+            if (!cartPath) { showToast(&quot;<span lang="hi-IN">خطأ في تهيئة السلة</span>.&quot;, 3000, true); return; }
+
+            try {
+                const itemRef = doc(db, cartPath, itemId);
+                await deleteDoc(itemRef);
+                showToast(&quot;<span lang="hi-IN">تمت إزالة المنتج من السلة بنجاح</span>.&quot;); 
+            } catch (error) {
+                logError(`Error removing item ${itemId} from cart:`, error);
+                showToast(&quot;<span lang="hi-IN">خطأ أثناء إزالة المنتج من السلة</span>.&quot;, 3000, true);
+            }
+        };
+
+        function updateCartSummary(cartItems) {
+            if (!cartSubtotalEl || !cartTotalEl || !cartSummaryContainer) {
+                logError(&quot;Cart summary elements not found.&quot;);
+                return;
+            }
+
+            if (cartItems.length === 0) {
+                cartSummaryContainer.classList.add('hidden');
+                return;
+            }
+
+            cartSummaryContainer.classList.remove('hidden');
+            let subtotal = 0;
+            cartItems.forEach(item =&gt; {
+                subtotal += (parseFloat(item.price) || 0) * (item.quantity || 0);
+            });
+            const total = subtotal; 
+
+            cartSubtotalEl.textContent = subtotal.toLocaleString('ar-IQ', { style: 'currency', currency: 'IQD', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+            cartTotalEl.textContent = total.toLocaleString('ar-IQ', { style: 'currency', currency: 'IQD', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        }
+
+        function updateCartIconCount(cartItems) { 
+             if (!cartItemCountEl) return;
+            const count = cartItems.reduce((sum, item) =&gt; sum + (item.quantity || 0), 0);
+            cartItemCountEl.textContent = count &gt; 99 ? '99+' : String(count); 
+            cartItemCountEl.classList.toggle('hidden', count === 0);
+        };
+
+        function displayCart() {
+            console.log(&quot;[V20] Navigated to Cart page. Content is managed by real-time listener.&quot;);
+        };
+
+        function listenToCartChanges() {
+            if (!userId || !firebaseInitialized || !db) {
+                logError(&quot;Cannot listen to cart changes: User not authenticated or Firebase not initialized.&quot;);
+                if (cartUnsubscribe) { cartUnsubscribe(); cartUnsubscribe = null; }
+                renderCartItems([]); updateCartSummary([]); updateCartIconCount([]);
+                return;
+            }
+
+            const cartPath = userCartCollectionPath();
+            if (!cartPath) {
+                logError(&quot;Cannot listen to cart changes: Cart path is null.&quot;);
+                if (cartUnsubscribe) { cartUnsubscribe(); cartUnsubscribe = null; }
+                renderCartItems([]); updateCartSummary([]); updateCartIconCount([]);
+                return;
+            }
+
+            if (cartUnsubscribe) {
+                cartUnsubscribe(); 
+                cartUnsubscribe = null;
+                console.log(&quot;[V20] Previous cart listener detached.&quot;);
+            }
+
+            const q = firestoreQuery(collection(db, cartPath)); 
+            console.log(`[V20] Setting up cart listener for path: ${cartPath}`);
+
+            cartUnsubscribe = onSnapshot(q, (snapshot) =&gt; {
+                console.log(&quot;[V20] Cart snapshot received.&quot;);
+                let cartItems = snapshot.docs.map(d =&gt; ({ id: d.id, ...d.data() }));
+                cartItems.sort((a, b) =&gt; { 
+                    const timeA = a.addedAt &amp;&amp; a.addedAt.toMillis ? a.addedAt.toMillis() : 0;
+                    const timeB = b.addedAt &amp;&amp; b.addedAt.toMillis ? b.addedAt.toMillis() : 0;
+                    return timeB - timeA; 
+                });
+                
+                renderCartItems(cartItems);
+                updateCartSummary(cartItems);
+                updateCartIconCount(cartItems);
+            }, (error) =&gt; {
+                logError(&quot;Error in cart snapshot listener:&quot;, error);
+                showToast(&quot;<span lang="hi-IN">خطأ في تحديث السلة</span>. <span lang="hi-IN">يرجى المحاولة لاحقاً</span>.&quot;, 4000, true);
+                renderCartItems([]); updateCartSummary([]); updateCartIconCount([]);
+            });
+            console.log(&quot;[V20] Cart listener attached.&quot;);
+        }
+        
+        window.showAuthForm = function(formType) {
+            const loginSection = document.getElementById('loginSection');
+            const registerSection = document.getElementById('registerSection');
+            const forgotPasswordSection = document.getElementById('forgotPasswordSection');
+
+            const loginTab = document.getElementById('loginTab');
+            const registerTab = document.getElementById('registerTab');
+            const authTabsContainer = loginTab ? loginTab.parentElement : null;
+
+
+            if (authErrorElement) { authErrorElement.textContent = ''; authErrorElement.classList.add('hidden');}
+
+            if (loginSection) loginSection.classList.add('hidden');
+            if (registerSection) registerSection.classList.add('hidden');
+            if (forgotPasswordSection) forgotPasswordSection.classList.add('hidden');
+
+            [loginTab, registerTab].forEach(tab =&gt; {
+                if (tab) {
+                    tab.classList.remove('border-brand-primary', 'text-brand-primary', 'font-semibold');
+                    tab.classList.add('border-transparent', 'text-text-secondary', 'hover:text-text-primary', 'hover:border-gray-300');
+                }
+            });
+            
+            if (authTabsContainer) authTabsContainer.classList.remove('hidden'); 
+
+            if (formType === 'login') {
+                if (loginSection) loginSection.classList.remove('hidden');
+                if (loginTab) {
+                    loginTab.classList.add('border-brand-primary', 'text-brand-primary', 'font-semibold');
+                    loginTab.classList.remove('border-transparent', 'text-text-secondary');
+                }
+            } else if (formType === 'register') {
+                if (registerSection) registerSection.classList.remove('hidden');
+                if (registerTab) {
+                    registerTab.classList.add('border-brand-primary', 'text-brand-primary', 'font-semibold');
+                    registerTab.classList.remove('border-transparent', 'text-text-secondary');
+                }
+            } else if (formType === 'forgotPassword') {
+                if (forgotPasswordSection) forgotPasswordSection.classList.remove('hidden');
+                if (authTabsContainer) authTabsContainer.classList.add('hidden'); 
+            }
+            console.log(`[V20] Switched to auth form: ${formType}`);
+        };
+
+        function handleAuthError(error, defaultMessage = &quot;<span lang="hi-IN">حدث خطأ في عملية المصادقة</span>.&quot;) {
+            if (!authErrorElement) {
+                logError(&quot;authErrorElement not found. Cannot display auth error:&quot;, error.message);
+                showToast(defaultMessage, 4000, true);
+                return;
+            }
+            logError(&quot;Authentication error:&quot;, error);
+            let message = defaultMessage;
+            switch (error.code) {
+                case 'auth/user-not-found':
+                case 'auth/wrong-password':
+                case 'auth/invalid-credential':
+                    message = &quot;<span lang="hi-IN">البريد الإلكتروني أو كلمة المرور غير صحيحة</span>.&quot;;
+                    break;
+                case 'auth/email-already-in-use':
+                    message = &quot;<span lang="hi-IN">هذا البريد الإلكتروني مستخدم بالفعل</span>. <span lang="hi-IN">حاول تسجيل الدخول</span>.&quot;;
+                    break;
+                case 'auth/weak-password':
+                    message = &quot;<span lang="hi-IN">كلمة المرور ضعيفة جداً</span>. <span lang="hi-IN">يجب أن تتكون من </span>6 <span lang="hi-IN">أحرف على الأقل</span>.&quot;;
+                    break;
+                case 'auth/invalid-email':
+                    message = &quot;<span lang="hi-IN">صيغة البريد الإلكتروني غير صحيحة</span>.&quot;;
+                    break;
+                case 'auth/requires-recent-login':
+                    message = &quot;<span lang="hi-IN">تتطلب هذه العملية إعادة تسجيل الدخول مؤخراً</span>.&quot;;
+                    break;
+                case 'auth/too-many-requests':
+                     message = &quot;<span lang="hi-IN">تم حظر الطلبات مؤقتاً بسبب كثرة المحاولات الفاشلة</span>. <span lang="hi-IN">يرجى المحاولة لاحقاً</span>.&quot;;
+                    break;
+                default:
+                    message = error.message &amp;&amp; error.message.includes(&quot;Firebase:&quot;) ? &quot;<span lang="hi-IN">حدث خطأ غير متوقع</span>. <span lang="hi-IN">حاول مرة أخرى</span>.&quot; : (error.message || defaultMessage);
+            }
+            authErrorElement.textContent = message;
+            authErrorElement.classList.remove('hidden');
+        }
+
+        if (loginFormEl) {
+            loginFormEl.addEventListener('submit', async (e) =&gt; {
+                e.preventDefault();
+                if (!firebaseInitialized || !auth) { handleAuthError({ code: 'auth/internal-error' }, &quot;<span lang="hi-IN">خدمة المصادقة غير متوفرة حالياً</span>.&quot;); return; }
+                
+                const emailInput = loginFormEl.querySelector('#email-login');
+                const passwordInput = loginFormEl.querySelector('#password-login');
+                const submitButton = loginFormEl.querySelector('button[type=&quot;submit&quot;]');
+
+                if (!emailInput || !passwordInput) { logError(&quot;Login form inputs missing.&quot;); handleAuthError({}, &quot;<span lang="hi-IN">خطأ في النموذج</span>.&quot;); return; }
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+
+                if (!email || !password) { handleAuthError({}, &quot;<span lang="hi-IN">يرجى إدخال البريد الإلكتروني وكلمة المرور</span>.&quot;); return; }
+                
+                if (authErrorElement) { authErrorElement.textContent = ''; authErrorElement.classList.add('hidden'); }
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '&lt;i class=&quot;fas fa-spinner fa-spin mr-2&quot;&gt;&lt;/i&gt; <span lang="hi-IN">جار تسجيل الدخول</span>...';
+                }
+
+                try {
+                    await signInWithEmailAndPassword(auth, email, password);
+                    showToast(&quot;<span lang="hi-IN">تم تسجيل الدخول بنجاح</span>!&quot;);
+                } catch (error) {
+                    handleAuthError(error);
+                } finally {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = '<span lang="hi-IN">تسجيل الدخول</span>';
+                    }
+                }
+            });
+        }
+
+        if (registerFormEl) {
+            registerFormEl.addEventListener('submit', async (e) =&gt; {
+                e.preventDefault();
+                if (!firebaseInitialized || !auth) { handleAuthError({ code: 'auth/internal-error' }, &quot;<span lang="hi-IN">خدمة المصادقة غير متوفرة حالياً</span>.&quot;); return; }
+
+                const emailInput = registerFormEl.querySelector('#email-register');
+                const passwordInput = registerFormEl.querySelector('#password-register');
+                const confirmPasswordInput = registerFormEl.querySelector('#password-confirm-register');
+                const submitButton = registerFormEl.querySelector('button[type=&quot;submit&quot;]');
+
+                if (!emailInput || !passwordInput || !confirmPasswordInput) { logError(&quot;Register form inputs missing.&quot;); handleAuthError({}, &quot;<span lang="hi-IN">خطأ في النموذج</span>.&quot;); return; }
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+                const confirmPassword = confirmPasswordInput.value;
+
+                if (!email || !password || !confirmPassword) { handleAuthError({}, &quot;<span lang="hi-IN">يرجى ملء جميع الحقول</span>.&quot;); return; }
+                if (password !== confirmPassword) { handleAuthError({}, &quot;<span lang="hi-IN">كلمتا المرور غير متطابقتين</span>.&quot;); return; }
+                if (password.length &lt; 6) { handleAuthError({code: 'auth/weak-password'}); return; }
+                
+                if (authErrorElement) { authErrorElement.textContent = ''; authErrorElement.classList.add('hidden'); }
+                 if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '&lt;i class=&quot;fas fa-spinner fa-spin mr-2&quot;&gt;&lt;/i&gt; <span lang="hi-IN">جار إنشاء الحساب</span>...';
+                }
+
+                try {
+                    await createUserWithEmailAndPassword(auth, email, password);
+                    showToast(&quot;<span lang="hi-IN">تم إنشاء حسابك بنجاح</span>! <span lang="hi-IN">مرحباً بك</span>.&quot;);
+                } catch (error) {
+                    handleAuthError(error);
+                } finally {
+                     if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = '<span lang="hi-IN">إنشاء حساب جديد</span>';
+                    }
+                }
+            });
+        }
+
+        if (forgotPasswordFormEl) {
+            forgotPasswordFormEl.addEventListener('submit', async (e) =&gt; {
+                e.preventDefault();
+                if (!firebaseInitialized || !auth) { handleAuthError({ code: 'auth/internal-error' }, &quot;<span lang="hi-IN">خدمة المصادقة غير متوفرة حالياً</span>.&quot;); return; }
+
+                const emailInput = forgotPasswordFormEl.querySelector('#email-forgot');
+                const submitButton = forgotPasswordFormEl.querySelector('button[type=&quot;submit&quot;]');
+
+                if (!emailInput) { logError(&quot;Forgot password email input missing.&quot;); handleAuthError({}, &quot;<span lang="hi-IN">خطأ في النموذج</span>.&quot;); return; }
+                const email = emailInput.value.trim();
+                if (!email) { handleAuthError({}, &quot;<span lang="hi-IN">يرجى إدخال بريدك الإلكتروني</span>.&quot;); return; }
+
+                if (authErrorElement) { authErrorElement.textContent = ''; authErrorElement.classList.add('hidden'); }
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '&lt;i class=&quot;fas fa-spinner fa-spin mr-2&quot;&gt;&lt;/i&gt; <span lang="hi-IN">جار الإرسال</span>...';
+                }
+                try {
+                    await sendPasswordResetEmail(auth, email);
+                    showToast(&quot;<span lang="hi-IN">تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني إذا كان مسجلاً</span>.&quot;, 5000);
+                    if (typeof window.showAuthForm === 'function') window.showAuthForm('login');
+                } catch (error) {
+                    handleAuthError(error, &quot;<span lang="hi-IN">حدث خطأ أثناء محاولة إرسال بريد إعادة التعيين</span>.&quot;);
+                } finally {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = '<span lang="hi-IN">إرسال رابط الاستعادة</span>';
+                    }
+                }
+            });
+        }
+        
+        function displayUserProfile() {
+            if (!userProfileInfoContainer) { logError(&quot;User profile info container not found.&quot;); return; }
+            if (userId) { 
+                const displayEmail = userEmail || (auth.currentUser &amp;&amp; auth.currentUser.isAnonymous ? &quot;<span lang="hi-IN">زائر </span>(<span lang="hi-IN">حساب مؤقت</span>)&quot; : &quot;<span lang="hi-IN">غير متوفر</span>&quot;);
+                const userInitial = (displayEmail === &quot;<span lang="hi-IN">زائر </span>(<span lang="hi-IN">حساب مؤقت</span>)&quot; || displayEmail === &quot;<span lang="hi-IN">غير متوفر</span>&quot;) ? '<span lang="hi-IN">ز</span>' : displayEmail.charAt(0).toUpperCase();
+                const brandPrimaryColor = getComputedStyle(document.documentElement).getPropertyValue('--brand-primary').trim().substring(1); 
+                userProfileInfoContainer.innerHTML = `
+                    &lt;div class=&quot;space-y-4 text-center sm:text-right&quot;&gt;
+                         &lt;img src=&quot;https://placehold.co/100x100/${brandPrimaryColor}/FFFFFF?text=${userInitial}&amp;font=Almarai&quot; alt=&quot;<span lang="hi-IN">صورة المستخدم</span>&quot; class=&quot;w-24 h-24 rounded-full mx-auto sm:mx-0 mb-4 border-4 border-white shadow-lg object-cover&quot;&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-semibold text-text-primary&quot;&gt;<span lang="hi-IN">البريد الإلكتروني</span>:&lt;/h3&gt;
+                            &lt;p class=&quot;text-text-secondary&quot;&gt;${displayEmail}&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;h3 class=&quot;text-lg font-semibold text-text-primary&quot;&gt;<span lang="hi-IN">معرف المستخدم</span>:&lt;/h3&gt;
+                            &lt;p class=&quot;text-text-secondary text-xs break-all&quot;&gt;${userId}&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;button onclick=&quot;window.logoutUser()&quot; class=&quot;btn btn-danger mt-6 w-full sm:w-auto&quot;&gt;&lt;i class=&quot;fas fa-sign-out-alt mr-2&quot;&gt;&lt;/i&gt;<span lang="hi-IN">تسجيل الخروج</span>&lt;/button&gt;
+                    &lt;/div&gt;`;
+            } else {
+                userProfileInfoContainer.innerHTML = '&lt;p class=&quot;text-text-light text-center py-10&quot;&gt;<span lang="hi-IN">يرجى تسجيل الدخول لعرض ملفك الشخصي</span>.&lt;/p&gt;';
+            }
+        }
+
+        if (firebaseInitialized &amp;&amp; auth) {
+            (async () =&gt; {
+                console.log(&quot;[V20] Initial auth check started.&quot;);
+                const initialAuthToken = (typeof __initial_auth_token === 'string' &amp;&amp; __initial_auth_token.trim() !== &quot;&quot;) ? __initial_auth_token.trim() : null;
+                if (!auth.currentUser) { 
+                    if (initialAuthToken) {
+                        console.log(&quot;[V20] Attempting sign-in with custom token.&quot;);
+                        try {
+                            await signInWithCustomToken(auth, initialAuthToken);
+                            console.log(&quot;[V20] Sign-in with custom token successful.&quot;);
+                        } catch (error) {
+                            logError(&quot;Initial sign-in with custom token failed:&quot;, error);
+                            if (!auth.currentUser) {
+                                console.log(&quot;[V20] Custom token failed, attempting anonymous sign-in as fallback.&quot;);
+                                try { await signInAnonymously(auth); console.log(&quot;[V20] Fallback anonymous sign-in successful.&quot;); } 
+                                catch (anonError) { logError(&quot;Fallback anonymous sign-in also failed:&quot;, anonError); }
+                            }
+                        }
+                    } else {
+                        console.log(&quot;[V20] No custom token, attempting initial anonymous sign-in.&quot;);
+                        try { await signInAnonymously(auth); console.log(&quot;[V20] Initial anonymous sign-in successful.&quot;); } 
+                        catch (error) { logError(&quot;Initial anonymous sign-in failed:&quot;, error); }
+                    }
+                } else {
+                    console.log(&quot;[V20] User already available or auth state being handled. Initial auth IIFE skipped.&quot;);
+                }
+            })();
+
+            onAuthStateChanged(auth, async (user) =&gt; { 
+                const currentVisiblePage = document.querySelector('.page.visible-page-flex');
+                if (user) { 
+                    userId = user.uid;
+                    userEmail = user.email; 
+                    let displayName = user.isAnonymous ? `<span lang="hi-IN">زائر</span>` : (user.email ? user.email.split('@')[0] : `<span lang="hi-IN">مستخدم</span>`);
+                    
+                    console.log(`[V20] User signed IN: ${displayName} (UID: ${userId}, Anon: ${user.isAnonymous})`);
+
+                    if(loginNavButtonHeaderEl) loginNavButtonHeaderEl.classList.add('hidden');
+                    if(loginNavButtonMobileEl) loginNavButtonMobileEl.classList.add('hidden');
+                    
+                    if(userProfileButtonHeaderEl) userProfileButtonHeaderEl.classList.remove('hidden'); 
+                    if(logoutNavButtonMobileEl) logoutNavButtonMobileEl.classList.remove('hidden');
+                    
+                    if(userIdentifierHeaderEl) {
+                        userIdentifierHeaderEl.textContent = `<span lang="hi-IN">مرحباً، </span>${displayName}`; 
+                        userIdentifierHeaderEl.classList.remove('hidden');
+                    }
+                    if(footerUserIdElement) footerUserIdElement.textContent = userId; 
+                    
+                    listenToCartChanges(); 
+                    
+                    if (!window.v20InitialDataLoaded || (currentVisiblePage &amp;&amp; currentVisiblePage.id === 'auth')) {
+                        if (!currentVisiblePage || currentVisiblePage.id === 'auth' || currentVisiblePage.id === 'home' || currentVisiblePage.id === '') {
+                           navigateTo('home'); 
+                        }
+                        window.v20InitialDataLoaded = true; 
+                    }
+                } else { 
+                    userId = null; userEmail = null;
+                    console.log(&quot;[V20] User signed OUT.&quot;);
+
+                    if(loginNavButtonHeaderEl) loginNavButtonHeaderEl.classList.remove('hidden');
+                    if(loginNavButtonMobileEl) loginNavButtonMobileEl.classList.remove('hidden');
+
+                    if(userProfileButtonHeaderEl) userProfileButtonHeaderEl.classList.add('hidden'); 
+                    if(logoutNavButtonMobileEl) logoutNavButtonMobileEl.classList.add('hidden');
+                    
+                    if(userIdentifierHeaderEl) userIdentifierHeaderEl.classList.add('hidden');
+                    if(footerUserIdElement) footerUserIdElement.textContent = &quot;N/A&quot;;
+
+                    if (cartUnsubscribe) { cartUnsubscribe(); cartUnsubscribe = null; } 
+                    renderCartItems([]); updateCartSummary([]); updateCartIconCount([]); 
+                    window.v20InitialDataLoaded = false; 
+                    
+                    const initialAuthTokenOnSignOut = (typeof __initial_auth_token === 'string' &amp;&amp; __initial_auth_token.trim() !== &quot;&quot;) ? __initial_auth_token : null;
+                    if (auth &amp;&amp; !auth.currentUser &amp;&amp; !initialAuthTokenOnSignOut) { 
+                        try { 
+                            console.log(&quot;[V20] User signed out, no custom token, attempting anonymous sign-in.&quot;);
+                            await signInAnonymously(auth); 
+                        } 
+                        catch (error) { logError(&quot;Subsequent anonymous sign-in failed after logout!&quot;, error); }
+                    } else if (auth &amp;&amp; !auth.currentUser &amp;&amp; initialAuthTokenOnSignOut) {
+                        console.log(&quot;[V20] User signed out, custom token available. Waiting for potential re-auth with token.&quot;);
+                    }
+                    if (currentVisiblePage &amp;&amp; currentVisiblePage.id !== 'auth' &amp;&amp; currentVisiblePage.id !== 'home') {
+                        navigateTo('home');
+                    }
+                }
+            });
+        } else {
+            logError(&quot;Firebase not initialized. Auth/Firestore unavailable.&quot;);
+            const body = document.querySelector('body');
+            if (body) {
+                const errorDiv = document.createElement('div');
+                errorDiv.innerHTML = '&lt;p style=&quot;color: red; text-align: center; padding: 20px; background: #fff0f0; border: 1px solid red; position: fixed; top: 0; left: 0; width: 100%; z-index: 2000;&quot;&gt;<span lang="hi-IN">فشل تحميل خدمات المتجر الأساسية</span>. <span lang="hi-IN">يرجى المحاولة لاحقاً أو التأكد من اتصالك بالإنترنت</span>.&lt;/p&gt;';
+                body.prepend(errorDiv);
+            }
+        }
+        
+        window.logoutUser = async function() { 
+            if (!auth) return;
+            try {
+                await signOut(auth);
+                productsCache = []; window.v20InitialDataLoaded = false; 
+                showToast(&quot;<span lang="hi-IN">تم تسجيل خروجك بنجاح</span>.&quot;);
+            } catch (error) { 
+                logError(&quot;Error signing out:&quot;, error); 
+                showToast(&quot;<span lang="hi-IN">حدث خطأ أثناء تسجيل الخروج</span>.&quot;, 3000, true);
+            }
+        };
+        
+        document.addEventListener('DOMContentLoaded', async () =&gt; { 
+            console.log(&quot;[V20] DOM fully loaded.&quot;);
+            const currentYearEl = document.getElementById('currentYear');
+            if(currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+            
+            if (!firebaseInitialized) {
+                logError(&quot;Firebase NOT initialized by DOMContentLoaded.&quot;);
+            }
+            
+            await fetchProducts(); // Pre-fetch products on DOM load
+
+            setTimeout(() =&gt; {
+                const currentPage = document.querySelector('.page.visible-page-flex');
+                if (!currentPage &amp;&amp; (firebaseInitialized || dummyProducts.length &gt; 0) ) { // Ensure navigation if firebase init or dummies exist
+                    console.log(&quot;[V20] No page visible after initial load, navigating to home.&quot;);
+                    navigateTo('home'); 
+                }
+            }, 200); 
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
